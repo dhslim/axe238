@@ -12,13 +12,15 @@
   .wrap{max-width:1040px;margin:0 auto;padding:3rem 1.5rem 4rem}
   h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.2rem,5vw,3.2rem);margin:0 0 .3rem}
   .sub{color:#6b5b45;max-width:60ch;margin:0 0 2.4rem}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem}
+  .lead-card{outline:2px solid #C98A3B;outline-offset:3px}
   .card{display:flex;flex-direction:column;background:#fff;border:1px solid #D8C7A8;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
   .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(60,40,16,.5)}
   .swatch{height:120px;display:flex;align-items:flex-end;padding:.7rem;font-family:'Fraunces',serif;font-size:1.1rem}
   .s1{background:linear-gradient(120deg,#FBF6EC,#F0E6D2);color:#241A12;border-bottom:3px solid #C98A3B}
   .s2{background:linear-gradient(120deg,#FAFAF8,#1C2A23);color:#fff}
   .s3{background:radial-gradient(circle at 30% 30%,rgba(212,165,60,.4),#15100A 70%);color:#D4A53C}
+  .s3b{background:radial-gradient(circle at 30% 25%,rgba(212,165,60,.45),#FAF4E6 72%);color:#9A6E20;border-bottom:3px solid #C8972E}
   .card .body{padding:1.1rem 1.2rem 1.4rem}
   .card h3{font-family:'Fraunces',serif;margin:0 0 .3rem;font-size:1.3rem}
   .card .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:600}
@@ -32,7 +34,7 @@
 <body>
 <div class="wrap">
   <h1>Church of Brotherly Love — three design directions</h1>
-  <p class="sub">Same content, three different feels. Open each, scroll the homepage, and tell me which direction resonates — then I'll build the winner out properly in Astro. Resize the window to see them adapt to mobile.</p>
+  <p class="sub">All photo-free (symbol &amp; architecture, not stock people). <b>You picked V3 Illuminated</b> — so the new <b>Illuminated (Light)</b> is the lead: same style on warm vellum to fix the too-dark feel, keeping one dramatic dark band. Open it first; the others are kept for reference. Resize the window to see them adapt to mobile.</p>
   <div class="grid">
     <a class="card" href="./v1-lamplight.html">
       <div class="swatch s1">Aa — Fraunces</div>
@@ -48,12 +50,19 @@
         <div class="meta">Bricolage + Hanken · off-white &amp; ink · clean / premium</div>
         <div class="open">Open V2 →</div></div>
     </a>
+    <a class="card lead-card" href="./v3-illuminated-light.html">
+      <div class="swatch s3b">Aa — Cormorant</div>
+      <div class="body"><span class="tag">Version 3 · Light ★ your pick</span><h3>Illuminated (Light)</h3>
+        <p>V3's illuminated style on warm vellum — gold &amp; jewel tones on ivory, with one dramatic dark band (the Key of David).</p>
+        <div class="meta">Cormorant + EB Garamond · vellum &amp; gold · sacred / luminous</div>
+        <div class="open">Open V3 Light →</div></div>
+    </a>
     <a class="card" href="./v3-illuminated.html">
       <div class="swatch s3">Aa — Cormorant</div>
-      <div class="body"><span class="tag">Version 3</span><h3>Illuminated</h3>
-        <p>Dark, dramatic, symbolic. Gold-leaf on near-black, the Four Faces as a cinematic centerpiece.</p>
+      <div class="body"><span class="tag">Version 3 · Dark (original)</span><h3>Illuminated (Dark)</h3>
+        <p>The original dark take — gold-leaf on near-black, the Four Faces as a cinematic centerpiece. Kept for comparison.</p>
         <div class="meta">Cormorant + EB Garamond · dark &amp; gold · sacred / cinematic</div>
-        <div class="open">Open V3 →</div></div>
+        <div class="open">Open V3 Dark →</div></div>
     </a>
   </div>
   <footer>Design comps for axe238.com · open any file directly in your browser · pick a direction and the real Astro build follows.</footer>
