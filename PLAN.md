@@ -1,6 +1,17 @@
-# Church of Brotherly Love — Website Rebuild Plan
+# Church of Philadelphia — Website Rebuild Plan
 
-The Church of Brotherly Love is the church of Philadelphia — the open door of Revelation 3:8 — and the new site makes that single line the brand: a lamplit doorway you are invited through, not a cold newspaper grid. We adopt the **identity-first** direction as the skeleton (its discipline — *distinctiveness bounded by usability*, *design for evergreen because the real failure was staleness*, *brand and IA are the same object*) and graft in the two best ideas it lacked: the **Read↔Watch duality** between every teaching and its sermon, and an **auto-derived "This Sunday" block + sticky service bar** that structurally cures the "abandoned 2020 site" problem with zero ongoing maintenance. The symbolic system — open door, key of David, and the four pillars (Lion / Ox / Man / Eagle) — is encoded directly in the content layer so it threads through color, icon, and navigation automatically. The result is a hospitable, accessible, sub-3-second site that serves the 74% of first-timers who land on the homepage while honoring the church's rich Apostolic identity and its flagship Alpha Ministry teaching.
+The Church of Philadelphia is the church of the open door of Revelation 3:8 — and the new site makes that single line the brand: a lamplit doorway you are invited through, not a cold newspaper grid. We adopt the **identity-first** direction as the skeleton (its discipline — *distinctiveness bounded by usability*, *design for evergreen because the real failure was staleness*, *brand and IA are the same object*) and graft in the two best ideas it lacked: the **Read↔Watch duality** between every teaching and its sermon, and an **auto-derived "This Sunday" block + sticky service bar** that structurally cures the "abandoned 2020 site" problem with zero ongoing maintenance. The symbolic system — open door, key of David, and the four pillars (Lion / Ox / Man / Eagle) — is encoded directly in the content layer so it threads through color, icon, and navigation automatically. The result is a hospitable, accessible, sub-3-second site that serves the 74% of first-timers who land on the homepage while honoring the church's rich Apostolic identity and its flagship Alpha Ministry teaching.
+
+## ✅ Locked Decisions (2026-06-11)
+
+> Final choices that **supersede any conflicting details below** — specifically the old multi-page sitemap, the Fraunces/Inter typography, and the congregation-photography art direction. They'll be folded into the body during the build. **Reference comp:** [`design/v3-illuminated-light.html`](design/v3-illuminated-light.html) (chosen from three comps; V3 picked, then lightened).
+
+- **Visual direction — "Illuminated (Light)":** gold + jewel tones on warm **vellum** (illuminated-manuscript-on-cream) — classical, reverent, luminous. Light overall, with **one** dramatic dark band (the Key of David) for gravitas.
+- **Typography (replaces Fraunces + Inter):** **Cormorant Garamond** (display) + **EB Garamond** (body) + **Marcellus** small-caps (eyebrow labels).
+- **Palette tokens:** vellum bg `#FAF4E6` / `#F4EAD3`; ink `#2A2014`, ink-soft `#6B5A40`; gold `#C8972E`, gold-deep `#9A6E20` (text/linework on light), gold-bright `#D4A53C` (glows); Four Faces — lion `#9E2B25`, ox `#8A5A2B`, man `#C8972E`, eagle `#2F5D62`; dark band `#17110A`; hairline `#E2D4B2`.
+- **Imagery — NO people / congregation photography.** Deliberate (matches the original axe238.com and avoids the church-site formula). Visuals are **symbolic / architectural / abstract**: light through an open door, arches & pillars, sacred geometry, the Key, illustrated/engraved Four-Faces emblems, stone/parchment texture. Optional later: authentic church-provided building/baptism shots only — never stock.
+- **Architecture — HYBRID** (replaces the fully multi-page sitemap below): a **single-page home** with smooth scroll-to-section nav (**I'm New · Watch · Beliefs · Give · Contact are home sections**, auto-focus on click) **plus dedicated sub-pages only for the teaching library** — `/teachings` index + one page per teaching (the four faces, the series overview, End Time Dominion). Newcomers finish on the first page; long-form study content gets its own pages + SEO.
+- **Unchanged from below:** Astro **5.18.2** (with the Vite-6 `overrides` fix), Keystatic CMS, Web3Forms, Cloudflare Pages; the open-door / Four-Faces / Key-of-David identity; all real content and the open-questions list.
 
 ## Goals & Problems We're Fixing
 
@@ -223,7 +234,7 @@ const teachings = defineCollection({
     summary: z.string().max(200),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Church of Brotherly Love'), // replaces "Book of Dan"
+    author: z.string().default('Church of Philadelphia'), // replaces "Book of Dan"
     cover: image().optional(),
     coverAlt: z.string().optional(),
     youtubeId: z.string().optional(),  // Read<->Watch: links article to its sermon

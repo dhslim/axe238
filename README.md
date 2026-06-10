@@ -1,6 +1,6 @@
-# axe238 — Church of Brotherly Love website
+# axe238 — Church of Philadelphia website
 
-Modern rebuild of [axe238.com](https://axe238.com/) — the website of the **Church of Brotherly Love** (the church of Philadelphia, Revelation 3), currently a dated WordPress / Newspaper theme site last updated in 2020.
+Modern rebuild of [axe238.com](https://axe238.com/) — the website of the **Church of Philadelphia** — the church of the open door (Revelation 3), currently a dated WordPress / Newspaper theme site last updated in 2020.
 
 > **Status:** 📐 Planning. This repo currently holds the architecture & design plan. The Astro build follows.
 
