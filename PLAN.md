@@ -21,7 +21,7 @@ The Church of Philadelphia is the church of the open door of Revelation 3:8 — 
 - **Make newcomers the audience, not members.** Old site is an article feed → homepage triages to **I'm New / Watch / What We Believe**, with a chronological Plan-Your-Visit page answering the silent questions (when, where, parking, kids, dress).
 - **Kill the dated newspaper look.** All-caps walls, big empty gaps, generic TagDiv theme → **Fraunces/Inter type pairing**, real type scale, warm parchment palette, the portal-arch motif, and purposeful whitespace.
 - **Fix the missing service-times-on-homepage failure.** → Service times appear in the sticky bar, the "This Sunday" block, the footer, and the Visit page.
-- **Replace the giving page honestly.** → Rebel Give + Zelle only (the "8 levels" are NOT on the live site — omit and confirm with church; do not invent).
+- **Replace the giving page honestly.** → Rebel Give + Zelle, plus the **Eight Levels of Giving** — recovered from the old site's `Giving-Ladder.png` image and refined into a clean element (`design/giving-eight-levels.html`); confirm wording with the church.
 - **Add a real contact form + map.** Old site has only address text + a WP login widget → **Web3Forms contact + connect forms** and an embedded map; the login/password widget and TagDiv credit are removed entirely.
 - **Ship real accessibility, not an overlay.** → Code-level WCAG 2.2 AA: semantic HTML, 4.5:1 contrast, keyboard operability, captions/transcripts.
 - **Enrich the thin teaching articles.** Scriptures are reference-only → full verse text, natural-facts stat cards, and Exousia/Dunamis glossary chips.
@@ -101,7 +101,7 @@ Shared `TeachingLayout`: face emblem + accent color (from `face`), title in Frau
 @axe.238 media wall via **facade embeds** (youtube-nocookie, thumbnail-then-iframe). Flagship **Four Faces playlist**; recent-sermons gallery; **"Read the teaching →" chips** back to articles; Subscribe CTA. Auto-updates → never stale.
 
 ### Give (`/give`)
-2 Cor 9:7 (*"The Lord loves a cheerful giver"*); **Rebel Give** (secure encrypted page) + **Zelle** only; privacy assurance ("We will never share your personal, financial information…"); account features list. **The "8 levels of charitable giving" is omitted** with a build note to confirm with the church; no tiers fabricated. *New (confirm):* whether a mailing address for gifts should appear.
+2 Cor 9:7 (*"The Lord loves a cheerful giver"*); **Rebel Give** (secure encrypted page) + **Zelle** only; privacy assurance ("We will never share your personal, financial information…"); account features list. **The "Eight Levels of Giving"** (recovered from the old site's giving-ladder image) is included as a refined, elegant ascending-ladder element — see `design/giving-eight-levels.html`. *New (confirm):* whether a mailing address for gifts should appear.
 
 ### Contact (`/contact`)
 "Come Join Us" heading; address, **embedded map**, phone (475) 221-4673, email philly238@gmail.com, YouTube @axe.238, service times; **Web3Forms contact form** (name, email, message → `/thanks`). WP login widget removed. *Mapped:* contact page details.
@@ -329,7 +329,7 @@ Querying: `getCollection('teachings', ({ data }) => !data.draft)`, sort by `orde
 - **Naming / location:** Confirm the church is in **Stratford, CT** (not Philadelphia, PA) and approve the one-sentence "symbolic name" treatment on About + Visit. Has the congregation ever been elsewhere?
 - **Real contact details:** Confirm address, phone (475) 221-4673, and email philly238@gmail.com are current; provide a **Web3Forms access key** tied to the inbox that should receive form submissions.
 - **Service times:** Confirm Sunday School 10:00 AM, Worship 11:00 AM, Wednesday 7:00 PM are still accurate, plus any holidays/seasonal changes and **kids/childcare** details for the Visit page.
-- **Giving:** Confirm **Rebel Give** + **Zelle** are still the methods; provide the actual links/widget. **Do the "8 levels of charitable giving" exist?** If so, supply the names/text — they are NOT on the live site and will be omitted until provided. Should a mailing address for gifts appear?
+- **Giving:** Confirm **Rebel Give** + **Zelle** are still the methods; provide the actual links/widget. The **"Eight Levels of Giving"** content was **recovered** from the old site's `Giving-Ladder.png` and refined into `design/giving-eight-levels.html` — confirm the wording is right. Should a mailing address for gifts appear?
 - **Leadership & story:** Provide **pastor/leadership names, bios, and photos**, a founding story for About, and (ideally) a short **pastor welcome video** — replacing the generic "Book of Dan"/"pressmaster" byline.
 - **Photography:** Provide **real congregation photos** (worship, fellowship, baptism, building exterior, parking) for the hero, Visit, and galleries — no stock.
 - **YouTube content:** Confirm the **video IDs / playlists** to map to each teaching (Read↔Watch) and whether to migrate/curate the old teaching content; confirm the @axe.238 playlist structure for the Four Faces flagship.
