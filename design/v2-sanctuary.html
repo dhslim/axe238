@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Church of Brotherly Love — Stratford, CT</title>
+<meta name="description" content="The Church of Brotherly Love, Stratford CT. A church of the open door. Plan your visit." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FAFAF8; --ink:#16140F; --muted:#6B6660; --line:#E4E1DA;
+    --gold:#C2872E; --deep:#1C2A23; --deep-soft:#2C3D34;
+    --lion:#9E2B25; --eagle:#2F5D62; --ox:#8A5A2B; --man:#C2872E;
+    --display:'Bricolage Grotesque',sans-serif; --body:'Hanken Grotesk',system-ui,sans-serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.05rem;line-height:1.6}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:-.03em;margin:0}
+  h1{font-size:clamp(3rem,9vw,7rem);font-weight:800}
+  h2{font-size:clamp(2rem,5vw,3.6rem)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 2rem}
+  .eyebrow{font-family:var(--body);text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;font-weight:700;color:var(--gold)}
+  section{padding:clamp(4rem,9vw,8rem) 0;border-top:1px solid var(--line)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--bg);font-weight:600;
+    padding:.95rem 1.8rem;border-radius:0;text-decoration:none;transition:background .2s,transform .2s;font-size:.98rem}
+  .btn:hover{background:var(--gold);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--bg)}
+  .servicebar{background:var(--ink);color:var(--bg);font-size:.8rem;letter-spacing:.04em;text-align:center;padding:.55rem 1rem;font-weight:500}
+  .servicebar b{color:var(--gold)}
+  header.site{position:sticky;top:0;z-index:40;background:rgba(250,250,248,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:2rem;height:78px}
+  .brand{display:flex;align-items:center;gap:.55rem;font-family:var(--display);font-weight:700;font-size:1.1rem;text-decoration:none;letter-spacing:-.02em}
+  .nav ul{display:flex;gap:1.6rem;list-style:none;margin:0 0 0 auto;padding:0;align-items:center}
+  .nav a.link{text-decoration:none;font-size:.92rem;color:var(--muted);font-weight:500}
+  .nav a.link:hover{color:var(--ink)}
+  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--ink);padding:.5rem .7rem;cursor:pointer}
+  /* hero — doorway frame device */
+  .hero{padding:clamp(3.5rem,7vw,6rem) 0 0}
+  .hero-inner{position:relative;border:1px solid var(--line);border-bottom:none;padding:clamp(2.5rem,6vw,5.5rem) clamp(1.5rem,4vw,4rem) 0;
+    border-radius:0}
+  .doorframe{position:absolute;left:50%;top:8%;transform:translateX(-50%);width:min(70%,560px);height:84%;
+    border:1px solid var(--gold);border-bottom:none;border-radius:280px 280px 0 0;opacity:.5;pointer-events:none}
+  .hero h1{position:relative;text-align:center;max-width:16ch;margin:0 auto}
+  .hero .sub{position:relative;text-align:center;max-width:46ch;margin:1.6rem auto 0;color:var(--muted);font-size:1.2rem}
+  .hero .sub em{color:var(--ink);font-style:normal}
+  .hero .cta-row{position:relative;display:flex;gap:.8rem;justify-content:center;margin:2rem 0 0;flex-wrap:wrap}
+  .hero .frame-photo{position:relative;height:min(42vh,360px);margin-top:3rem;border-top:1px solid var(--line);
+    background:linear-gradient(120deg,#efece4,#e6e2d8);display:flex;align-items:center;justify-content:center;
+    color:var(--muted);text-transform:uppercase;letter-spacing:.2em;font-size:.74rem}
+  /* three doors */
+  .doors{display:grid;grid-template-columns:repeat(3,1fr)}
+  .door{padding:2.5rem 0;border-left:1px solid var(--line);text-decoration:none;transition:background .2s}
+  .door:first-child{border-left:none}
+  .door:hover{background:#f3f1ea}
+  .door .n{font-family:var(--display);font-size:.9rem;color:var(--gold);font-weight:700}
+  .door h3{font-size:clamp(1.6rem,3vw,2.2rem);margin:.6rem 0 .5rem;padding-right:1rem}
+  .door p{margin:0;color:var(--muted);padding-right:2rem}
+  .door .arrow{margin-top:1.2rem;color:var(--ink);font-weight:600}
+  /* split welcome */
+  .split{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+  .split .big{font-family:var(--display);font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.3;font-weight:500;letter-spacing:-.02em}
+  /* four faces — deep section */
+  .facewrap{background:var(--deep);color:#EDEAE2;border-top:none}
+  .facewrap .eyebrow{color:var(--gold)}
+  .facewrap h2{color:#fff}
+  .faces{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2.5rem;border:1px solid var(--deep-soft)}
+  .face{padding:2rem 1.4rem;border-left:1px solid var(--deep-soft)}
+  .face:first-child{border-left:none}
+  .face .bar{width:38px;height:3px;background:var(--accent);margin-bottom:1.2rem}
+  .face h3{font-size:1.5rem;color:#fff}
+  .face p{margin:.5rem 0 0;color:#B9B3A6;font-size:.92rem}
+  .face .num{font-family:var(--display);color:var(--accent);font-size:.85rem;font-weight:700}
+  /* beliefs */
+  .beliefs h2{max-width:18ch}
+  .beliefs p{font-size:clamp(1.2rem,2vw,1.5rem);max-width:30ch;color:var(--muted);line-height:1.45}
+  /* this sunday */
+  .sunday{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+  .times{list-style:none;padding:0;margin:1.5rem 0}
+  .times li{display:flex;justify-content:space-between;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--line)}
+  .times .t{font-family:var(--display);font-size:1.3rem;font-weight:700}
+  .times .d{color:var(--muted)}
+  .mapph{aspect-ratio:4/3;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;
+    background:linear-gradient(120deg,#eeebe3,#e6e2d8);color:var(--muted);padding:1rem}
+  /* key band */
+  .key{background:var(--ink);color:var(--bg);text-align:center;border-top:none}
+  .key .eyebrow{color:var(--gold)}
+  .key h2{color:#fff;max-width:14ch;margin:.6rem auto}
+  .key p{color:#B9B3A6;max-width:34ch;margin:0 auto;font-size:1.15rem}
+  /* footer */
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:4rem 0 2rem}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
+  .fgrid h4{font-family:var(--display);font-size:1rem;margin:0 0 1rem}
+  .fgrid ul{list-style:none;padding:0;margin:0;line-height:2.1;color:var(--muted)}
+  .fgrid a{text-decoration:none}.fgrid a:hover{color:var(--gold)}
+  .fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding-top:1.3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+  @media (max-width:880px){
+    .nav ul{display:none}.menu-btn{display:block}
+    .nav ul.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:1rem 2rem;align-items:flex-start;gap:.6rem}
+    .doors{grid-template-columns:1fr}.door{border-left:none;border-top:1px solid var(--line)}.door:first-child{border-top:none}
+    .split{grid-template-columns:1fr}.faces{grid-template-columns:1fr 1fr}.face:nth-child(3){border-left:none}
+    .sunday{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="servicebar">Sundays <b>10 &amp; 11am</b> · Wednesdays <b>7pm</b> · 80 Ferry Blvd, Stratford CT · <b>(475) 221-4673</b></div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><circle cx="9" cy="9" r="4"/><path d="M12 12l7 7"/></svg> Brotherly Love</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" onclick="var u=document.getElementById('navlist');var o=u.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+    <ul id="navlist">
+      <li><a class="link" href="#visit">I'm New</a></li>
+      <li><a class="link" href="#faces">Teachings</a></li>
+      <li><a class="link" href="#watch">Watch</a></li>
+      <li><a class="link" href="#beliefs">Beliefs</a></li>
+      <li><a class="link" href="#give">Give</a></li>
+      <li><a class="link" href="#footer">Contact</a></li>
+      <li><a class="btn" href="#visit">Plan Your Visit</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="border-top:none">
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="doorframe" aria-hidden="true"></div>
+        <span class="eyebrow" style="display:block;text-align:center">The Church of Philadelphia · Stratford, CT</span>
+        <h1>A church of the open door</h1>
+        <p class="sub"><em>"Behold, I have set before thee an open door, and no man can shut it."</em> — Revelation 3:8</p>
+        <div class="cta-row">
+          <a class="btn" href="#visit">Plan Your Visit →</a>
+          <a class="btn btn-ghost" href="#watch">Watch</a>
+        </div>
+        <div class="frame-photo">Congregation photo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE DOORS -->
+  <section style="padding-top:0;padding-bottom:0;border-top:none">
+    <div class="wrap"><div class="doors">
+      <a class="door" href="#visit"><span class="n">01</span><h3>I'm New</h3><p>Plan your first visit and see what Sunday is like.</p><div class="arrow">→</div></a>
+      <a class="door" href="#watch"><span class="n">02</span><h3>Watch</h3><p>Sermons &amp; teachings on YouTube @axe.238.</p><div class="arrow">→</div></a>
+      <a class="door" href="#beliefs"><span class="n">03</span><h3>What We Believe</h3><p>Our statement of faith, in plain words.</p><div class="arrow">→</div></a>
+    </div></div>
+  </section>
+
+  <!-- WELCOME -->
+  <section><div class="wrap split">
+    <div><span class="eyebrow">Welcome</span></div>
+    <p class="big">Whoever you are, the door is open. We're a family bound by brotherly love, gathering in Stratford to know Jesus and grow in His Spirit.</p>
+  </div></section>
+
+  <!-- FOUR FACES -->
+  <section class="facewrap" id="faces"><div class="wrap">
+    <span class="eyebrow">Alpha Ministry</span>
+    <h2>The Four Faces</h2>
+    <div class="faces">
+      <div class="face" style="--accent:var(--lion)"><div class="bar"></div><span class="num">I</span><h3>Lion</h3><p>Righteousness, Boldness &amp; Protection</p></div>
+      <div class="face" style="--accent:var(--ox)"><div class="bar"></div><span class="num">II</span><h3>Ox</h3><p>The Work of God; perennial strength</p></div>
+      <div class="face" style="--accent:var(--man)"><div class="bar"></div><span class="num">III</span><h3>Man</h3><p>Spiritual Order; the Face of God</p></div>
+      <div class="face" style="--accent:var(--eagle)"><div class="bar"></div><span class="num">IV</span><h3>Eagle</h3><p>Spiritual sight; God's light</p></div>
+    </div>
+  </div></section>
+
+  <!-- BELIEFS -->
+  <section class="beliefs" id="beliefs"><div class="wrap split">
+    <div><span class="eyebrow">What We Believe</span><h2 style="margin-top:.6rem">The faith, in plain words</h2></div>
+    <p>One God. Jesus as Lord and the Chief Apostle. Repentance and water baptism in the Name of Jesus. The Gift of the Holy Ghost. The Bible — organic, perennial, applicable to every age.</p>
+  </div></section>
+
+  <!-- THIS SUNDAY -->
+  <section id="visit"><div class="wrap sunday">
+    <div>
+      <span class="eyebrow">This Sunday</span>
+      <h2 style="margin-top:.5rem">Come join us</h2>
+      <ul class="times">
+        <li><span class="t">Sunday School</span><span class="d">10:00 AM</span></li>
+        <li><span class="t">Sunday Worship</span><span class="d">11:00 AM</span></li>
+        <li><span class="t">Wednesday</span><span class="d">7:00 PM</span></li>
+      </ul>
+      <p style="color:var(--muted)">80 Ferry Blvd, 2nd Floor, Room 202 · Stratford, CT 06615</p>
+      <a class="btn" href="#visit">Plan Your Visit →</a>
+    </div>
+    <div class="mapph">📍 80 Ferry Blvd, 2nd Fl, Room 202<br>Stratford, CT 06615</div>
+  </div></section>
+
+  <!-- KEY -->
+  <section class="key" id="watch"><div class="wrap">
+    <span class="eyebrow">End Time Dominion</span>
+    <h2>The Key of David</h2>
+    <p>"He shall open, and none shall shut." — Isaiah 22:22 · Revelation 3:7</p>
+  </div></section>
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Church of Brotherly Love</h4>
+        <p style="color:var(--muted);max-width:34ch">A church of the open door, in Stratford, Connecticut. 80 Ferry Blvd, 2nd Floor, Room 202, Stratford, CT 06615.</p>
+      </div>
+      <div><h4>Gather</h4><ul><li>Sunday School — 10 AM</li><li>Sunday Worship — 11 AM</li><li>Wednesday — 7 PM</li></ul></div>
+      <div id="give"><h4>Connect</h4><ul>
+        <li><a href="tel:+14752214673">(475) 221-4673</a></li>
+        <li><a href="mailto:philly238@gmail.com">philly238@gmail.com</a></li>
+        <li><a href="https://www.youtube.com/@axe.238">YouTube @axe.238</a></li>
+        <li><a href="#give">Give</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 Church of Brotherly Love</span><span>A church of the open door.</span></div>
+  </div>
+</footer>
+</body>
+</html>

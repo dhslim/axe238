@@ -29,5 +29,6 @@ yarn-error.log*
 # os / editor
 .DS_Store
 Thumbs.db
+*.stackdump
 .vscode/
 .idea/
