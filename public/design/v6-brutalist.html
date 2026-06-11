@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philadelphia — A Church of the Open Door · Stratford, CT</title>
+<meta name="description" content="Church of Philadelphia — a church of the open door. Sundays 10 &amp; 11am, Wednesdays 7pm. 80 Ferry Blvd, Stratford CT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F2EFE9;
+  --ink:#111111;
+  --red:#C41E1E;
+  --lion:#9E2B25;
+  --ox:#8A5A2B;
+  --man:#C8972E;
+  --eagle:#2F5D62;
+  --line:rgba(17,17,17,.13);
+  --bd:3px solid var(--ink);
+  --pad:clamp(1rem,4vw,3rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bone);color:var(--ink);font-family:'Archivo',Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+::selection{background:var(--red);color:var(--bone)}
+svg{display:block}
+a{color:inherit}
+h1,h2,h3,.anton{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--bone);padding:.8rem 1.4rem;z-index:300;font-weight:800;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:0}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:var(--pad);position:relative}
+.eyebrow{display:inline-block;background:var(--red);color:var(--bone);font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;padding:.45em 1em}
+.red{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7em;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.09em;font-size:.92rem;padding:1em 1.5em;border:var(--bd);background:var(--bone);color:var(--ink);text-decoration:none;cursor:pointer;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bone)}
+.btn-red{background:var(--red);color:var(--bone)}
+.btn-red:hover{background:var(--ink);color:var(--bone)}
+.btn svg{width:1.1em;height:1.1em}
+.outline{color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+.outline-bone{color:transparent;-webkit-text-stroke:2.5px var(--bone)}
+.outline-red{color:transparent;-webkit-text-stroke:2.5px var(--red)}
+@supports not (-webkit-text-stroke:2px #000){
+  .outline{color:var(--ink)}
+  .outline-bone{color:var(--bone)}
+  .outline-red{color:var(--red)}
+}
+/* exposed grid lines */
+.gridlines{position:fixed;inset:0;z-index:0;pointer-events:none;max-width:1320px;margin:0 auto;padding-inline:var(--pad);display:flex;justify-content:space-between}
+.gridlines span{width:1px;background:var(--line)}
+@media (max-width:800px){.gridlines span:nth-child(even){display:none}}
+main,header,footer,.svcbar{position:relative;z-index:1}
+/* section scaffolding */
+.sec{border-top:var(--bd)}
+.sec-head{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:clamp(1rem,3vw,2.5rem);padding:clamp(2rem,5vw,3.5rem) 0 1.5rem;border-bottom:var(--bd)}
+.sec-num{font-family:'Anton',sans-serif;font-size:clamp(4.5rem,11vw,9.5rem);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--ink);opacity:.32}
+@supports not (-webkit-text-stroke:2px #000){.sec-num{color:var(--ink);opacity:.14}}
+.sec-head h2{font-size:clamp(2.6rem,6.5vw,5.5rem);margin-top:.5rem}
+.sec-sub{max-width:46ch;font-size:1.02rem;margin-top:.8rem;font-weight:500}
+/* reveal (JS-gated) */
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="gridlines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+<div class="top-sticky">
+  <div class="svcbar" role="region" aria-label="Service times and location">
+    <p>Sundays 10 &amp; 11am&nbsp;&nbsp;·&nbsp;&nbsp;Wednesdays 7pm&nbsp;&nbsp;·&nbsp;&nbsp;80 Ferry Blvd, Stratford CT&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:+14752214673">(475) 221-4673</a></p>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="logo" href="#top" aria-label="Philadelphia — home">
+        <svg viewBox="0 0 24 32" aria-hidden="true"><rect x="2" y="2" width="20" height="28" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 4 L20 8 V30 L12 26 Z" fill="#C41E1E"/></svg>
+        Philadelphia
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#visit">I'm New</a></li>
+          <li><a href="#faces">Teachings</a></li>
+          <li><a href="#doors">Watch</a></li>
+          <li><a href="#beliefs">Beliefs</a></li>
+          <li><a href="#give">Give</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-cta-li"><a class="nav-cta-link" href="#visit">Plan Your Visit</a></li>
+        </ul>
+      </nav>
+      <a href="#visit" class="btn btn-red head-cta">Plan Your Visit</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="nt-label">Menu</span><span class="nt-bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    </div>
+  </header>
+</div>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap">
+    <p class="hero-kicker rv"><span class="eyebrow">Church of Philadelphia</span><span class="kick-loc">Stratford, Connecticut — Revelation 3:8</span></p>
+    <h1 id="hero-h" class="hero-h">
+      <span class="line rv">Behold,</span>
+      <span class="line rv">an <span class="outline">open</span></span>
+      <span class="line rv">door<span class="red">.</span></span>
+    </h1>
+  </div>
+  <div class="hero-rule" aria-hidden="true"></div>
+  <div class="wrap hero-low">
+    <blockquote class="hero-quote rv">
+      <span class="qm" aria-hidden="true">&ldquo;</span>
+      <p>Behold, I have set before thee an open door, and no man can shut it.</p>
+      <cite>&mdash; Revelation 3:8</cite>
+    </blockquote>
+    <div class="hero-cta rv">
+      <p class="brand-line">A church of the <em>open door</em>.</p>
+      <div class="hero-btns">
+        <a href="#visit" class="btn btn-red">Plan Your Visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 12h18M13 4l8 8-8 8"/></svg></a>
+        <a href="#doors" class="btn">Start Here</a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.top-sticky{position:sticky;top:0;z-index:120}
+.svcbar{background:var(--ink);color:var(--bone);font-size:.74rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.svcbar p{max-width:1320px;margin:0 auto;padding:.55rem var(--pad);text-align:center}
+.svcbar a{color:var(--bone);text-decoration:none;border-bottom:2px solid var(--red)}
+.svcbar a:hover{background:var(--bone);color:var(--red)}
+.site-head{background:var(--bone);border-bottom:var(--bd)}
+.head-row{display:flex;align-items:center;gap:1.4rem;min-height:4.6rem}
+.logo{display:flex;align-items:center;gap:.65rem;font-family:'Anton',sans-serif;font-size:1.45rem;text-transform:uppercase;text-decoration:none;letter-spacing:.02em}
+.logo svg{width:19px;height:26px}
+.main-nav{margin-left:auto}
+.main-nav ul{list-style:none;display:flex;align-items:center;gap:1.5rem}
+.main-nav a{text-decoration:none;font-weight:800;text-transform:uppercase;font-size:.8rem;letter-spacing:.11em;border-bottom:3px solid transparent;padding-bottom:2px}
+.main-nav a:hover{border-color:var(--red);color:var(--red)}
+.nav-cta-li{display:none}
+.head-cta{padding:.75em 1.2em;font-size:.8rem}
+.nav-toggle{display:none;align-items:center;gap:.6rem;margin-left:auto;background:var(--bone);border:var(--bd);padding:.6rem .9rem;font:800 .8rem 'Archivo',sans-serif;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.nt-bars{display:grid;gap:4px}
+.nt-bars i{display:block;width:20px;height:3px;background:var(--ink)}
+@media (max-width:980px){
+  .main-nav{display:none}
+  .head-cta{display:none}
+  .nav-toggle{display:inline-flex}
+  .site-head.nav-open .main-nav{display:block;position:fixed;inset:0;z-index:80;background:var(--bone);padding:10rem var(--pad) 3rem;overflow:auto;margin:0}
+  .site-head.nav-open .main-nav ul{flex-direction:column;align-items:stretch;gap:0;max-width:1320px;margin:0 auto;border-top:var(--bd)}
+  .site-head.nav-open .main-nav li{border-bottom:var(--bd)}
+  .site-head.nav-open .main-nav a{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(2.2rem,9vw,3.6rem);letter-spacing:.02em;padding:.45em 0;border-bottom:none}
+  .site-head.nav-open .nav-cta-li{display:block}
+  .site-head.nav-open .nav-cta-link{color:var(--red)}
+}
+/* hero */
+.hero{padding-top:clamp(2.5rem,6vw,5rem);border-bottom:var(--bd);overflow:hidden}
+.hero-kicker{display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+.kick-loc{font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem}
+.hero-h{font-size:clamp(4.3rem,17.5vw,16.5rem);line-height:.84;margin-top:1.2rem;margin-bottom:clamp(1.5rem,4vw,3rem);letter-spacing:.005em;word-break:keep-all}
+.hero-h .line{display:block}
+.hero-rule{border-top:var(--bd)}
+.hero-low{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch}
+.hero-quote{padding:clamp(1.5rem,3.5vw,2.8rem) clamp(1.5rem,3.5vw,2.8rem) clamp(1.5rem,3.5vw,2.8rem) 0;border-right:var(--bd);position:relative}
+.hero-quote .qm{font-family:'Anton',sans-serif;font-size:clamp(4.5rem,9vw,8rem);line-height:.45;display:block;color:var(--red);margin-bottom:.35rem;transform:translateX(-.06em)}
+.hero-quote p{font-size:clamp(1.25rem,2.4vw,1.9rem);font-weight:700;line-height:1.3;max-width:24ch}
+.hero-quote cite{display:block;margin-top:1rem;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;color:var(--red)}
+.hero-cta{padding:clamp(1.5rem,3.5vw,2.8rem) 0 clamp(1.5rem,3.5vw,2.8rem) clamp(1.5rem,3.5vw,2.8rem);display:flex;flex-direction:column;justify-content:space-between;gap:1.6rem}
+.brand-line{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.05}
+.brand-line em{font-style:normal;color:var(--red)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.8rem}
+@media (max-width:760px){
+  .hero-low{grid-template-columns:1fr}
+  .hero-quote{border-right:none;border-bottom:var(--bd);padding-right:0}
+  .hero-cta{padding-left:0}
+}
+</style>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;</span><span>An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;</span>
+  </div>
+</div>
+
+<section class="sec" id="doors" aria-labelledby="doors-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num" aria-hidden="true">01</span>
+      <div>
+        <p class="eyebrow">Three Doors</p>
+        <h2 id="doors-h">Walk <span class="outline">in</span>.</h2>
+      </div>
+    </div>
+    <div class="doors-grid rv">
+      <a class="door-card" href="#visit">
+        <span class="dc-tag">Door 01</span>
+        <h3>I'm New</h3>
+        <p class="dc-desc">Plan your first visit. We'll hold the door.</p>
+        <span class="dc-foot">Plan your first visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 12h18M13 4l8 8-8 8"/></svg></span>
+      </a>
+      <a class="door-card" href="#">
+        <span class="dc-tag">Door 02</span>
+        <h3>Watch</h3>
+        <p class="dc-desc">Teachings on YouTube — @axe.238.</p>
+        <span class="dc-foot">Watch the teachings <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 12h18M13 4l8 8-8 8"/></svg></span>
+      </a>
+      <a class="door-card" href="#beliefs">
+        <span class="dc-tag">Door 03</span>
+        <h3>What We Believe</h3>
+        <p class="dc-desc">Our statement of faith, plainly stated.</p>
+        <span class="dc-foot">Read our beliefs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 12h18M13 4l8 8-8 8"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec welcome" aria-labelledby="welcome-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num" aria-hidden="true">02</span>
+      <div>
+        <p class="eyebrow">Welcome</p>
+        <h2 id="welcome-h" class="visually-plain">Whoever you are</h2>
+      </div>
+    </div>
+    <div class="welcome-body rv">
+      <p class="manifesto">Whoever you are, <span class="red">the door is open.</span> We are a family gathering in Stratford to know Jesus and grow in His Spirit.</p>
+      <p class="welcome-aside">Come as you are. Sundays at 10 &amp; 11am — seats are free, the welcome is real.</p>
+    </div>
+  </div>
+</section>
+<style>
+.marquee{background:var(--bone);overflow:hidden;position:relative;z-index:1}
+.marquee-track{display:flex;width:max-content;animation:slide 22s linear infinite}
+.marquee-track span{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(2rem,5vw,3.6rem);line-height:1;padding:.35em 0;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+@supports not (-webkit-text-stroke:2px #000){.marquee-track span{color:var(--ink)}}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+/* doors */
+.doors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--ink);border:var(--bd);border-top:none;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.door-card{background:var(--bone);color:var(--ink);text-decoration:none;display:flex;flex-direction:column;gap:1.1rem;padding:clamp(1.4rem,2.6vw,2.2rem);min-height:320px;transition:background .15s,color .15s}
+.door-card:hover{background:var(--ink);color:var(--bone)}
+.door-card:hover .dc-tag{background:var(--bone);color:var(--red)}
+.dc-tag{align-self:flex-start;background:var(--red);color:var(--bone);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;padding:.4em .9em}
+.door-card h3{font-size:clamp(2.1rem,3.4vw,3.2rem);max-width:8ch}
+.dc-desc{font-size:1rem;font-weight:500;max-width:26ch}
+.dc-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-top:var(--bd);border-color:currentColor;padding-top:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem}
+.dc-foot svg{width:1.4em;height:1.4em;flex:none}
+@media (max-width:880px){.doors-grid{grid-template-columns:1fr}.door-card{min-height:0}}
+/* welcome */
+.welcome .sec-head h2{position:absolute;left:-9999px}
+.welcome-body{padding:clamp(2.5rem,6vw,4.5rem) 0}
+.manifesto{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.9rem,4.8vw,4rem);line-height:1.04;max-width:24ch}
+.welcome-aside{margin-top:1.6rem;font-size:1.05rem;font-weight:500;max-width:48ch;border-left:6px solid var(--red);padding-left:1.1rem}
+</style>
+<section class="sec" id="faces" aria-labelledby="faces-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num" aria-hidden="true">03</span>
+      <div>
+        <p class="eyebrow">Alpha Ministry</p>
+        <h2 id="faces-h">The Four <span class="outline">Faces</span></h2>
+        <p class="sec-sub">Our flagship teaching — the four living creatures of Revelation 4, four faces of one calling.</p>
+      </div>
+    </div>
+    <div class="faces-grid rv">
+      <article class="face" style="--acc:var(--lion)">
+        <div class="face-bar" aria-hidden="true"></div>
+        <div class="face-inner">
+          <span class="face-num" aria-hidden="true">I</span>
+          <svg class="face-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1.5v3.5M12 19v3.5M1.5 12H5M19 12h3.5M4.6 4.6l2.5 2.5M16.9 16.9l2.5 2.5M19.4 4.6l-2.5 2.5M7.1 16.9l-2.5 2.5"/></svg>
+          <h3>Lion</h3>
+          <p class="face-sub">Righteousness, Boldness &amp; Protection</p>
+        </div>
+      </article>
+      <article class="face" style="--acc:var(--ox)">
+        <div class="face-bar" aria-hidden="true"></div>
+        <div class="face-inner">
+          <span class="face-num" aria-hidden="true">II</span>
+          <svg class="face-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M2 3c1 5.5 5 7.5 10 7.5S21 8.5 22 3"/><path d="M7.5 10.5v5a4.5 4.5 0 0 0 9 0v-5"/></svg>
+          <h3>Ox</h3>
+          <p class="face-sub">The Work of God; perennial strength</p>
+        </div>
+      </article>
+      <article class="face" style="--acc:var(--man)">
+        <div class="face-bar" aria-hidden="true"></div>
+        <div class="face-inner">
+          <span class="face-num" aria-hidden="true">III</span>
+          <svg class="face-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="7.5" r="4.5"/><path d="M3.5 22c0-4.7 3.8-7.5 8.5-7.5s8.5 2.8 8.5 7.5"/></svg>
+          <h3>Man</h3>
+          <p class="face-sub">Spiritual Order; the Face of God</p>
+        </div>
+      </article>
+      <article class="face" style="--acc:var(--eagle)">
+        <div class="face-bar" aria-hidden="true"></div>
+        <div class="face-inner">
+          <span class="face-num" aria-hidden="true">IV</span>
+          <svg class="face-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M1.5 12C4.5 6.8 8.3 4 12 4s7.5 2.8 10.5 8c-3 5.2-6.8 8-10.5 8S4.5 17.2 1.5 12Z"/><circle cx="12" cy="12" r="3.2"/></svg>
+          <h3>Eagle</h3>
+          <p class="face-sub">Spiritual sight; operating in God's light</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="beliefs" aria-labelledby="beliefs-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num" aria-hidden="true">04</span>
+      <div>
+        <p class="eyebrow">Beliefs</p>
+        <h2 id="beliefs-h">What we <span class="outline">hold</span>.</h2>
+      </div>
+    </div>
+    <div class="beliefs-list rv">
+      <div class="b-row"><span class="b-num" aria-hidden="true">01</span><h3>One God</h3><p>We believe in one God — and we worship Him alone.</p></div>
+      <div class="b-row"><span class="b-num" aria-hidden="true">02</span><h3>Jesus is Lord</h3><p>Jesus Christ as Lord and the Chief Apostle.</p></div>
+      <div class="b-row"><span class="b-num" aria-hidden="true">03</span><h3>Acts 2:38</h3><p>Repentance and water baptism in the Name of Jesus. This verse is the meaning of the domain <strong>axe238</strong>.</p></div>
+      <div class="b-row"><span class="b-num" aria-hidden="true">04</span><h3>The Holy Ghost</h3><p>The gift of the Holy Ghost, promised to all who are afar off.</p></div>
+      <div class="b-row"><span class="b-num" aria-hidden="true">05</span><h3>The Word</h3><p>The Bible as the Word of God — &ldquo;organic, perennial, and applicable to every age.&rdquo;</p></div>
+    </div>
+  </div>
+</section>
+<style>
+/* four faces */
+.faces-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:var(--ink);border:var(--bd);border-top:none;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.face{background:var(--bone);display:flex;flex-direction:column}
+.face-bar{height:18px;background:var(--acc)}
+.face-inner{padding:clamp(1.3rem,2.4vw,2rem);display:flex;flex-direction:column;gap:.9rem;flex:1}
+.face-num{font-family:'Anton',sans-serif;font-size:1.1rem;letter-spacing:.1em;color:var(--ink);border:var(--bd);align-self:flex-start;padding:.15em .55em}
+.face-svg{width:54px;height:54px;color:var(--acc);margin-top:.3rem}
+.face h3{font-size:clamp(2.6rem,4.6vw,4.4rem);letter-spacing:.01em}
+.face-sub{font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.88rem;line-height:1.45;max-width:22ch;border-top:3px solid var(--acc);padding-top:.9rem;margin-top:auto}
+@media (max-width:980px){.faces-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.faces-grid{grid-template-columns:1fr}}
+/* beliefs */
+.beliefs-list{display:grid;gap:3px;background:var(--ink);border:var(--bd);border-top:none;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.b-row{background:var(--bone);display:grid;grid-template-columns:minmax(4.5rem,7rem) minmax(12rem,.8fr) 1.2fr;gap:clamp(1rem,2.5vw,2rem);align-items:baseline;padding:clamp(1.2rem,2.4vw,1.8rem) clamp(1.2rem,2.6vw,2.2rem)}
+.b-num{font-family:'Anton',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;color:transparent;-webkit-text-stroke:2px var(--red)}
+@supports not (-webkit-text-stroke:2px #000){.b-num{color:var(--red)}}
+.b-row h3{font-size:clamp(1.5rem,2.4vw,2.1rem)}
+.b-row p{font-size:1rem;font-weight:500;max-width:52ch}
+@media (max-width:760px){.b-row{grid-template-columns:3.5rem 1fr}.b-row p{grid-column:2}}
+</style>
+<section class="sec" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num" aria-hidden="true">05</span>
+      <div>
+        <p class="eyebrow">This Sunday</p>
+        <h2 id="visit-h">Come <span class="outline">see</span>.</h2>
+      </div>
+    </div>
+    <div class="visit-grid rv">
+      <div class="sched">
+        <div class="s-row"><div><h3>Sunday School</h3></div><span class="s-time">10:00 AM</span></div>
+        <div class="s-row"><div><h3>Sunday Worship</h3><p class="s-note">&mdash; the full gospel experience</p></div><span class="s-time">11:00 AM</span></div>
+        <div class="s-row"><div><h3>Wednesday Service</h3></div><span class="s-time">7:00 PM</span></div>
+        <div class="s-cta">
+          <a href="#" class="btn btn-red">Plan Your Visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 12h18M13 4l8 8-8 8"/></svg></a>
+          <a href="tel:+14752214673" class="btn">(475) 221-4673</a>
+        </div>
+      </div>
+      <div class="map" role="img" aria-label="Map placeholder — 80 Ferry Blvd, 2nd Floor, Room 202, Stratford, CT 06615">
+        <div class="map-label"><span>Map</span><span>Stratford, CT</span></div>
+        <div class="map-body">
+          <svg class="map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7.5-7 7.5-12.5a7.5 7.5 0 1 0-15 0C4.5 15 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.8"/></svg>
+          <p class="map-addr anton">80 Ferry Blvd</p>
+          <p class="map-sub">2nd Floor &middot; Room 202 &middot; Stratford, CT 06615</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec give" id="give" aria-labelledby="give-h">
+  <div class="wrap give-wrap rv">
+    <p class="eyebrow">Giving</p>
+    <h2 id="give-h">Give to the <span class="outline">Church</span></h2>
+    <blockquote class="give-quote">
+      <span class="qm" aria-hidden="true">&ldquo;</span>
+      <p>&hellip;for God loveth a cheerful giver.</p>
+      <cite>&mdash; 2 Corinthians 9:7</cite>
+    </blockquote>
+    <div class="give-btns">
+      <a href="#" class="btn btn-red">Give with Rebel Give</a>
+      <a href="#" class="btn">Give with Zelle</a>
+    </div>
+    <p class="give-privacy">Secure &amp; encrypted. We will never share your personal or financial information with anyone, for any reason.</p>
+  </div>
+</section>
+
+<div class="marquee marquee-dark" aria-hidden="true">
+  <div class="marquee-track">
+    <span>An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;</span><span>An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;An open door&nbsp;·&nbsp;</span>
+  </div>
+</div>
+
+<section class="keyband" aria-labelledby="key-h">
+  <div class="wrap rv">
+    <p class="eyebrow">End Time Dominion</p>
+    <h2 id="key-h" class="key-h">&ldquo;He shall <span class="outline-bone">open</span>, and none shall shut.&rdquo;</h2>
+    <p class="key-cite">Isaiah 22:22 <span class="red">&middot;</span> Revelation 3:7</p>
+  </div>
+</section>
+</main>
+<style>
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3px;background:var(--ink);border:var(--bd);border-top:none;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.sched{background:var(--bone);display:flex;flex-direction:column}
+.s-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:clamp(1.2rem,2.4vw,1.7rem) clamp(1.2rem,2.6vw,2rem);border-bottom:var(--bd)}
+.s-row h3{font-size:clamp(1.5rem,2.6vw,2.2rem)}
+.s-note{font-weight:700;font-style:italic;font-size:.92rem;margin-top:.25rem}
+.s-time{font-family:'Anton',sans-serif;font-size:clamp(1.5rem,2.6vw,2.2rem);color:var(--red);white-space:nowrap}
+.s-cta{margin-top:auto;display:flex;flex-wrap:wrap;gap:.8rem;padding:clamp(1.2rem,2.4vw,1.7rem) clamp(1.2rem,2.6vw,2rem)}
+.map{background:var(--bone);display:flex;flex-direction:column;min-height:380px}
+.map-label{display:flex;justify-content:space-between;border-bottom:var(--bd);padding:.7rem clamp(1.2rem,2.6vw,2rem);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem}
+.map-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;text-align:center;padding:2rem}
+.map-pin{width:64px;height:64px;color:var(--red)}
+.map-addr{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.map-sub{font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem}
+@media (max-width:880px){.visit-grid{grid-template-columns:1fr}.map{min-height:300px}}
+/* give */
+.give-wrap{padding:clamp(2.5rem,6vw,5rem) 0;max-width:820px;margin-inline:auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+.give-wrap h2{font-size:clamp(2.8rem,7vw,5.5rem)}
+.give-quote .qm{font-family:'Anton',sans-serif;font-size:clamp(4rem,8vw,6.5rem);line-height:.45;display:block;color:var(--red);margin:0 auto .3rem}
+.give-quote p{font-size:clamp(1.3rem,2.6vw,2rem);font-weight:700}
+.give-quote cite{display:block;margin-top:.8rem;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;color:var(--red)}
+.give-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
+.give-privacy{font-size:.85rem;font-weight:500;max-width:52ch;border-top:var(--bd);padding-top:1rem}
+/* dark marquee + key band */
+.marquee-dark{background:var(--ink);border-bottom:none}
+.marquee-dark .marquee-track span{-webkit-text-stroke:1.5px var(--bone)}
+@supports not (-webkit-text-stroke:2px #000){.marquee-dark .marquee-track span{color:var(--bone)}}
+.keyband{background:var(--ink);color:var(--bone);padding:clamp(4rem,9vw,7.5rem) 0;text-align:center}
+.keyband .wrap{display:flex;flex-direction:column;align-items:center;gap:1.6rem}
+.key-h{font-size:clamp(2.6rem,8vw,7.2rem);max-width:14ch;line-height:.95}
+.key-cite{font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:.85rem;border:3px solid var(--bone);padding:.7em 1.3em}
+</style>
+<footer class="site-foot" id="contact" aria-label="Footer">
+  <div class="wrap">
+    <p class="foot-mark" aria-hidden="true">Phila&shy;delphia</p>
+    <div class="foot-grid">
+      <div class="f-col f-about">
+        <h3>Church of Philadelphia</h3>
+        <p>A church of the open door.</p>
+        <p class="f-note">&ldquo;Philadelphia&rdquo; is our Revelation 3 name &mdash; we gather in Stratford, Connecticut.</p>
+      </div>
+      <div class="f-col">
+        <h3>Visit</h3>
+        <address>80 Ferry Blvd<br>2nd Floor, Room 202<br>Stratford, CT 06615</address>
+      </div>
+      <div class="f-col">
+        <h3>Gather</h3>
+        <ul>
+          <li>Sunday School &mdash; 10:00 AM</li>
+          <li>Sunday Worship &mdash; 11:00 AM</li>
+          <li>Wednesday Service &mdash; 7:00 PM</li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#visit">I'm New</a></li>
+          <li><a href="#faces">Teachings</a></li>
+          <li><a href="#doors">Watch</a></li>
+          <li><a href="#beliefs">Beliefs</a></li>
+          <li><a href="#give">Give</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+14752214673">(475) 221-4673</a></li>
+          <li><a href="mailto:philly238@gmail.com">philly238@gmail.com</a></li>
+          <li><a href="#">YouTube &mdash; @axe.238</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p>&copy; 2026 Church of Philadelphia</p>
+      <p>&ldquo;Behold, I have set before thee an open door.&rdquo;</p>
+    </div>
+  </div>
+</footer>
+<style>
+.site-foot{background:var(--ink);color:var(--bone);border-top:6px solid var(--red);padding:clamp(2.5rem,6vw,4.5rem) 0 1.5rem;overflow:hidden}
+.foot-mark{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(3.6rem,12.5vw,11.5rem);line-height:.9;color:transparent;-webkit-text-stroke:2px rgba(242,239,233,.45);margin-bottom:clamp(1.5rem,4vw,3rem);word-break:break-word}
+@supports not (-webkit-text-stroke:2px #000){.foot-mark{color:rgba(242,239,233,.25)}}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.1fr .8fr 1.1fr;gap:2rem;border-top:3px solid var(--bone);padding-top:2rem}
+.f-col h3{font-size:1.05rem;letter-spacing:.08em;margin-bottom:.8rem;color:var(--bone)}
+.f-col p,.f-col li,.f-col address{font-style:normal;font-size:.95rem;font-weight:500;color:rgba(242,239,233,.82);line-height:1.7}
+.f-col ul{list-style:none}
+.f-col a{color:rgba(242,239,233,.82);text-decoration:none;border-bottom:2px solid transparent}
+.f-col a:hover{color:var(--bone);border-color:var(--red)}
+.f-about p:first-of-type{font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--bone)}
+.f-note{font-size:.85rem;margin-top:.7rem;max-width:30ch}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem;border-top:3px solid var(--bone);margin-top:2.2rem;padding-top:1.1rem;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.foot-base p{color:rgba(242,239,233,.82)}
+@media (max-width:980px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var btn=document.querySelector('.nav-toggle');
+  var hdr=document.querySelector('.site-head');
+  var lbl=btn.querySelector('.nt-label');
+  function setNav(open){
+    hdr.classList.toggle('nav-open',open);
+    btn.setAttribute('aria-expanded',String(open));
+    lbl.textContent=open?'Close':'Menu';
+  }
+  btn.addEventListener('click',function(){setNav(!hdr.classList.contains('nav-open'));});
+  document.querySelectorAll('#main-nav a').forEach(function(a){
+    a.addEventListener('click',function(){setNav(false);});
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&hdr.classList.contains('nav-open')){setNav(false);btn.focus();}
+  });
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
+</body>
+</html>
