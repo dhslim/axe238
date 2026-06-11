@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philadelphia — A church of the open door · Stratford CT</title>
+<meta name="description" content="Church of Philadelphia — a church of the open door. Sundays 10 & 11am, Wednesdays 7pm. 80 Ferry Blvd, Stratford CT.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF6F0;
+  --cream-2:#F3ECE1;
+  --cream-3:#EDE3D4;
+  --terracotta:#C96F4A;
+  --terracotta-deep:#B05A37;
+  --terracotta-soft:#E8C4B0;
+  --sage:#7A8B6F;
+  --sage-deep:#5F7055;
+  --sage-soft:#D4DCCB;
+  --ochre:#D9A441;
+  --ochre-soft:#F0DDB4;
+  --ink:#3D332B;
+  --ink-soft:#6B5D50;
+  --ink-faint:#9A8C7C;
+  --lion:#9E2B25;
+  --ox:#8A5A2B;
+  --man:#C8972E;
+  --eagle:#2F5D62;
+  --white:#FFFDFA;
+  --r-lg:24px;
+  --r-xl:28px;
+  --r-pill:999px;
+  --shadow-soft:0 2px 6px rgba(61,51,43,.05),0 12px 32px rgba(61,51,43,.08);
+  --shadow-lift:0 4px 10px rgba(61,51,43,.07),0 20px 48px rgba(61,51,43,.12);
+  --shadow-deep:0 6px 14px rgba(61,51,43,.07),0 18px 42px rgba(61,51,43,.12),0 40px 90px rgba(61,51,43,.10);
+  --spring:cubic-bezier(.34,1.45,.64,1);
+  --spring-pop:cubic-bezier(.34,1.56,.64,1);
+  --font-display:'Gabarito',system-ui,sans-serif;
+  --font-body:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}
+}
+body{
+  font-family:var(--font-body);
+  background-color:var(--cream);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23p)' opacity='0.05'/%3E%3C/svg%3E"),radial-gradient(900px 520px at 85% -120px,rgba(217,164,65,.08),rgba(217,164,65,0) 70%);
+  background-repeat:repeat,no-repeat;
+  color:var(--ink);
+  line-height:1.65;
+  font-size:1rem;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--terracotta);color:var(--white)}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.12;font-weight:800;letter-spacing:-.01em}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px;border-radius:6px}
+.container{width:min(1140px,100% - 2.5rem);margin-inline:auto}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--font-display);font-weight:700;
+  font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--terracotta-deep);
+}
+.eyebrow::before{content:"";width:22px;height:2.5px;border-radius:2px;background:var(--terracotta)}
+.chip{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:var(--white);border:1.5px solid var(--cream-3);
+  border-radius:var(--r-pill);padding:.45rem 1rem;
+  font-weight:600;font-size:.86rem;color:var(--ink-soft);
+  box-shadow:0 2px 8px rgba(61,51,43,.05);
+  transition:border-color .2s ease,box-shadow .25s ease;
+}
+.chip:hover{border-color:var(--terracotta-soft);box-shadow:0 4px 14px rgba(61,51,43,.1);animation:chipWiggle .55s ease-in-out}
+.chip-emoji{display:inline-block}
+.chip:hover .chip-emoji{animation:emojiBounce .6s var(--spring-pop)}
+@keyframes chipWiggle{0%,100%{rotate:0deg}25%{rotate:-2.4deg}55%{rotate:1.8deg}80%{rotate:-.8deg}}
+@keyframes emojiBounce{0%{transform:none}35%{transform:translateY(-5px) scale(1.18)}70%{transform:translateY(1px)}100%{transform:none}}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;
+  border-radius:var(--r-pill);padding:.85rem 1.8rem;
+  text-decoration:none;border:2px solid transparent;
+  transition:transform .3s var(--spring-pop),box-shadow .25s ease,background .2s ease,color .2s ease;
+  cursor:pointer;
+}
+.btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 6px 18px rgba(201,111,74,.35)}
+.btn-primary:hover{background:var(--terracotta-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,111,74,.4)}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-secondary:hover{background:var(--ink);color:var(--cream);transform:translateY(-2px)}
+.btn-sage{background:var(--sage);color:#fff;box-shadow:0 6px 18px rgba(122,139,111,.35)}
+.btn-sage:hover{background:var(--sage-deep);transform:translateY(-2px)}
+.btn:active{transform:translateY(1px) scale(.94);transition-duration:.08s}
+section{padding:5.5rem 0}
+.section-head{max-width:620px;margin-bottom:3rem}
+.section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);margin:.7rem 0 .8rem}
+.section-head p{color:var(--ink-soft);font-size:1.06rem}
+/* Scroll reveals — hidden state only when JS is present (.js on <html>) */
+.js .reveal{opacity:0;transform:translateY(26px) scale(.985);transition:opacity .55s ease,transform .75s var(--spring);transition-delay:var(--rd,0s)}
+.js .reveal.in{opacity:1;transform:none}
+.js .door-grid .reveal:nth-child(2){--rd:.1s}
+.js .door-grid .reveal:nth-child(3){--rd:.2s}
+.js .faces-grid .reveal:nth-child(2){--rd:.08s}
+.js .faces-grid .reveal:nth-child(3){--rd:.16s}
+.js .faces-grid .reveal:nth-child(4){--rd:.24s}
+.js .beliefs-list .reveal:nth-child(2){--rd:.07s}
+.js .beliefs-list .reveal:nth-child(3){--rd:.14s}
+.js .beliefs-list .reveal:nth-child(4){--rd:.21s}
+.js .beliefs-list .reveal:nth-child(5){--rd:.28s}
+.js .visit-map{--rd:.12s}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="service-bar" role="note" aria-label="Service times and location">
+  <p>☀ Sundays 10 &amp; 11am · Wednesdays 7pm <span class="sb-sep" aria-hidden="true">·</span> <span class="sb-loc">📍 80 Ferry Blvd, Stratford CT</span> <span class="sb-sep" aria-hidden="true">·</span> <a href="tel:+14752214673">(475) 221-4673</a></p>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Philadelphia — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
+          <path d="M8 36V18c0-6.6 5.4-12 12-12s12 5.4 12 12v18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <path d="M16 36V22c0-2.2 1.8-4 4-4s4 1.8 4 4v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">Philadelphia</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#new">I'm New</a></li>
+        <li><a href="#faces">Teachings</a></li>
+        <li><a href="#watch">Watch</a></li>
+        <li><a href="#beliefs">Beliefs</a></li>
+        <li><a href="#give">Give</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta-mobile" href="#visit">Plan Your Visit</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#visit">Plan Your Visit</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+      <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-blob hero-blob-a" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-b" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Church of Philadelphia · Stratford CT</p>
+      <h1 id="hero-h">A church of the <em>open&nbsp;door</em>.</h1>
+      <blockquote class="hero-verse">
+        <p>“Behold, I have set before thee an open door, and no man can shut it.”</p>
+        <cite>Revelation 3:8</cite>
+      </blockquote>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#visit">Plan Your Visit</a>
+        <a class="btn btn-secondary" href="#watch">Watch a Teaching</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><span class="chip-emoji">☀</span> Sundays 10am</span>
+        <span class="chip"><span class="chip-emoji">🕖</span> Wednesdays 7pm</span>
+        <span class="chip"><span class="chip-emoji">📍</span> Stratford CT</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="arch-frame">
+        <svg class="arch-svg" viewBox="0 0 360 440" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F0DDB4"/><stop offset=".55" stop-color="#E8C4B0"/><stop offset="1" stop-color="#D4DCCB"/>
+            </linearGradient>
+            <radialGradient id="sunG" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#D9A441"/><stop offset="1" stop-color="#C96F4A"/>
+            </radialGradient>
+          </defs>
+          <rect width="360" height="440" fill="url(#skyG)"/>
+          <g class="arch-sun">
+            <circle cx="180" cy="150" r="74" fill="url(#sunG)"/>
+            <g stroke="#C96F4A" stroke-width="5" stroke-linecap="round" opacity=".75">
+              <path d="M180 44v-20"/><path d="M256 76l14-14"/><path d="M104 76L90 62"/><path d="M288 150h20"/><path d="M52 150H32"/>
+            </g>
+          </g>
+          <path d="M-20 320 C 60 270, 130 300, 190 285 S 320 250, 380 290 V 440 H -20 Z" fill="#7A8B6F" opacity=".85"/>
+          <path d="M-20 360 C 80 320, 180 360, 260 338 S 360 320, 380 335 V 440 H -20 Z" fill="#5F7055"/>
+          <g fill="#FAF6F0" opacity=".9">
+            <path d="M148 440 v-96 a32 32 0 0 1 64 0 v96 z"/>
+          </g>
+          <path d="M168 440 v-72 a12 12 0 0 1 24 0 v72 z" fill="#3D332B" opacity=".55"/>
+        </svg>
+      </div>
+      <div class="float-card">
+        <span class="float-dot" aria-hidden="true"></span>
+        <div><strong>This Sunday</strong><br><span>Worship · 11:00 AM</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.service-bar{background:var(--ink);color:var(--cream);font-size:.84rem;font-weight:500;text-align:center;padding:.55rem 1rem}
+.service-bar a{color:var(--ochre);text-decoration:none;font-weight:600}
+.service-bar a:hover{text-decoration:underline}
+.sb-sep{opacity:.45;margin:0 .2rem}
+@media (max-width:640px){.service-bar .sb-loc{display:block}.service-bar .sb-sep{display:none}}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(250,246,240,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1.5px solid var(--cream-3)}
+.header-inner{display:flex;align-items:center;gap:1.5rem;padding:.85rem 0}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:var(--terracotta);color:#fff;box-shadow:0 4px 12px rgba(201,111,74,.35)}
+.brand-mark svg{width:24px;height:24px}
+.brand-name{font-family:var(--font-display);font-weight:800;font-size:1.3rem;letter-spacing:-.01em}
+.main-nav{margin-left:auto}
+.main-nav ul{display:flex;gap:.3rem;list-style:none}
+.main-nav a{font-weight:600;font-size:.94rem;text-decoration:none;color:var(--ink-soft);padding:.5rem .85rem;border-radius:var(--r-pill);transition:background .2s,color .2s}
+.main-nav a:hover{background:var(--cream-2);color:var(--ink)}
+.nav-cta{font-size:.92rem;padding:.65rem 1.4rem}
+.nav-cta-mobile{display:none}
+.nav-toggle{display:none;background:var(--white);border:1.5px solid var(--cream-3);border-radius:14px;width:46px;height:46px;cursor:pointer;color:var(--ink)}
+.nav-toggle-bars{display:grid;gap:6px;justify-items:center}
+.nav-toggle-bars i{display:block;width:20px;height:2.5px;border-radius:2px;background:currentColor;transition:transform .25s,opacity .25s}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars i:first-child{transform:translateY(4.25px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars i:last-child{transform:translateY(-4.25px) rotate(-45deg)}
+@media (max-width:860px){
+  .nav-cta{display:none}
+  .nav-toggle{display:grid;place-items:center;margin-left:auto}
+  .main-nav{position:absolute;top:100%;left:0;right:0;margin:0;background:var(--cream);border-bottom:1.5px solid var(--cream-3);box-shadow:var(--shadow-lift);padding:1rem 1.25rem 1.5rem;display:none}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:.15rem;margin-bottom:1rem}
+  .main-nav a{display:block;font-size:1.05rem;padding:.75rem 1rem}
+  .nav-cta-mobile{display:inline-flex;width:100%}
+}
+.hero{position:relative;overflow:hidden;padding:5rem 0 6rem}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}
+.hero-blob-a{width:480px;height:480px;background:var(--ochre-soft);top:-160px;right:-120px}
+.hero-blob-b{width:420px;height:420px;background:var(--sage-soft);bottom:-180px;left:-140px}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center}
+.hero-copy h1{font-size:clamp(2.6rem,5.6vw,4.1rem);font-weight:900;margin:.9rem 0 1.3rem}
+.hero-copy h1 em{font-style:normal;color:var(--terracotta);position:relative;white-space:nowrap}
+.hero-copy h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.28em;background:var(--ochre-soft);border-radius:99px;z-index:-1;transform-origin:left;animation:underlineGrow .55s var(--spring) 1.5s both}
+.hero-verse{border-left:4px solid var(--ochre);padding:.35rem 0 .35rem 1.2rem;margin-bottom:1.8rem;max-width:520px}
+.hero-verse p{font-size:1.13rem;color:var(--ink-soft);font-style:italic}
+.hero-verse cite{display:block;margin-top:.4rem;font-style:normal;font-family:var(--font-display);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta-deep)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.6rem}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.hero-art{position:relative}
+.arch-frame{border-radius:200px 200px var(--r-xl) var(--r-xl);overflow:hidden;box-shadow:var(--shadow-lift);border:6px solid var(--white);max-width:380px;margin-inline:auto}
+.arch-svg{width:100%;height:auto}
+.float-card{position:absolute;bottom:2rem;left:-2.4rem;rotate:-3deg;display:flex;align-items:center;gap:.75rem;background:var(--white);border-radius:18px;padding:.8rem 1.2rem;box-shadow:var(--shadow-deep);font-size:.85rem;line-height:1.35}
+.float-card strong{font-family:var(--font-display);font-size:.95rem}
+.float-card span{color:var(--ink-soft)}
+.float-dot{width:12px;height:12px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 5px var(--sage-soft);flex:none}
+/* Orchestrated page load — CSS-only, springy stagger:
+   1) arch settles  2) chips pop one-by-one  3) headline + CTAs rise  4) float card pops */
+.arch-frame{animation:archSettle .9s var(--spring) .05s both}
+.hero-chips .chip{animation:chipPop .55s var(--spring-pop) both}
+.hero-chips .chip:nth-child(1){animation-delay:.5s}
+.hero-chips .chip:nth-child(2){animation-delay:.62s}
+.hero-chips .chip:nth-child(3){animation-delay:.74s}
+.hero-copy .eyebrow{animation:fadeUp .55s ease .9s both}
+.hero-copy h1{animation:riseSpring .75s var(--spring) 1s both}
+.hero-verse{animation:fadeUp .6s ease 1.15s both}
+.hero-actions{animation:riseSpring .65s var(--spring) 1.28s both}
+.float-card{animation:cardPop .7s var(--spring-pop) 1.45s both}
+@keyframes archSettle{from{opacity:0;transform:translateY(40px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes chipPop{from{opacity:0;transform:translateY(10px) scale(.55)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes riseSpring{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes cardPop{from{opacity:0;transform:translateY(14px) scale(.6)}to{opacity:1;transform:none}}
+@keyframes underlineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* Idle atmosphere — gentle drift, guarded for reduced motion */
+@media (prefers-reduced-motion:no-preference){
+  .hero-blob-a{animation:blobDriftA 16s ease-in-out infinite alternate}
+  .hero-blob-b{animation:blobDriftB 19s ease-in-out infinite alternate}
+  .arch-sun{transform-box:fill-box;transform-origin:center;animation:sunDrift 8s ease-in-out infinite alternate}
+  .float-card{animation:cardPop .7s var(--spring-pop) 1.45s both,floatIdle 4.5s ease-in-out 2.4s infinite alternate}
+  .float-dot{animation:dotPulse 2s ease-in-out infinite alternate}
+}
+@keyframes blobDriftA{from{transform:translate(0,0) scale(1)}to{transform:translate(-26px,22px) scale(1.07)}}
+@keyframes blobDriftB{from{transform:translate(0,0) scale(1.05)}to{transform:translate(24px,-18px) scale(1)}}
+@keyframes sunDrift{from{transform:translateY(-3px)}to{transform:translateY(4px)}}
+@keyframes floatIdle{from{transform:translateY(0)}to{transform:translateY(-7px)}}
+@keyframes dotPulse{from{box-shadow:0 0 0 4px var(--sage-soft)}to{box-shadow:0 0 0 9px rgba(212,220,203,.3)}}
+@media (max-width:900px){
+  .hero{padding:3.5rem 0 4.5rem}
+  .hero-grid{grid-template-columns:1fr;gap:3rem}
+  .hero-art{max-width:420px}
+  .float-card{left:.5rem}
+}
+</style>
+<section class="doors" id="new" aria-labelledby="doors-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Start Here</p>
+      <h2 id="doors-h">Three doors in. Pick yours.</h2>
+      <p>However you found us, there's an easy next step waiting for you.</p>
+    </div>
+    <div class="door-grid">
+      <article class="door-card reveal">
+        <div class="door-art door-art-terra" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none"><path d="M36 96V56c0-13.3 10.7-24 24-24s24 10.7 24 24v40" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="60" cy="64" r="5" fill="currentColor"/><path d="M28 96h64" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>I'm New</h3>
+        <p>Plan your first visit — we'll save you a seat and show you around.</p>
+        <a class="door-link" href="#visit">Plan your first visit <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="door-card reveal" id="watch">
+        <div class="door-art door-art-sage" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none"><rect x="22" y="34" width="76" height="52" rx="14" stroke="currentColor" stroke-width="5"/><path d="M53 50l20 10-20 10z" fill="currentColor"/></svg>
+        </div>
+        <h3>Watch</h3>
+        <p>Teachings on YouTube — catch up anytime, anywhere, at your pace.</p>
+        <a class="door-link" href="#">YouTube @axe.238 <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="door-card reveal">
+        <div class="door-art door-art-ochre" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none"><path d="M60 28c-10-7-24-7-32 0v60c8-7 22-7 32 0 10-7 24-7 32 0V28c-8-7-22-7-32 0z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M60 28v60" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>What We Believe</h3>
+        <p>Our statement of faith — plain, biblical, and rooted in the Word.</p>
+        <a class="door-link" href="#beliefs">Read our beliefs <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="welcome" aria-labelledby="welcome-h">
+  <div class="container welcome-inner reveal">
+    <span class="welcome-sun" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="13" fill="currentColor"/><g stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M32 8v6"/><path d="M32 50v6"/><path d="M8 32h6"/><path d="M50 32h6"/><path d="M15 15l4 4"/><path d="M45 45l4 4"/><path d="M49 15l-4 4"/><path d="M19 45l-4 4"/></g></svg>
+    </span>
+    <h2 id="welcome-h">Whoever you are, the door is open.</h2>
+    <p>We are a family gathering in Stratford to know Jesus and grow in His Spirit.</p>
+  </div>
+</section>
+
+<section class="faces" id="faces" aria-labelledby="faces-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Alpha Ministry</p>
+      <h2 id="faces-h">The Four Faces</h2>
+      <p>Our flagship teaching — the four living creatures of Revelation 4, and what each face works in us.</p>
+    </div>
+    <div class="faces-grid">
+      <article class="face-card reveal" style="--face:#9E2B25">
+        <span class="face-emblem" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="34" r="14"/><path d="M32 20c-3-7-10-9-15-6 1 6 5 9 9 10M32 20c3-7 10-9 15-6-1 6-5 9-9 10"/><path d="M26 32h.1M38 32h.1" stroke-width="4.5"/><path d="M28 40c2.5 2 5.5 2 8 0"/><path d="M20 44c-2 4-2 8 1 11M44 44c2 4 2 8-1 11"/></svg>
+        </span>
+        <h3>Lion</h3>
+        <p class="face-sub">Righteousness, Boldness &amp; Protection</p>
+      </article>
+      <article class="face-card reveal" style="--face:#8A5A2B">
+        <span class="face-emblem" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 26c-6-2-9-8-8-14 7 0 12 4 13 9M46 26c6-2 9-8 8-14-7 0-12 4-13 9"/><ellipse cx="32" cy="38" rx="15" ry="16"/><path d="M26 36h.1M38 36h.1" stroke-width="4.5"/><ellipse cx="32" cy="46" rx="6" ry="4"/></svg>
+        </span>
+        <h3>Ox</h3>
+        <p class="face-sub">The Work of God; perennial strength</p>
+      </article>
+      <article class="face-card reveal" style="--face:#C8972E">
+        <span class="face-emblem" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="26" r="12"/><path d="M26 25h.1M38 25h.1" stroke-width="4.5"/><path d="M29 31c2 1.5 4 1.5 6 0"/><path d="M14 56c2-11 9-17 18-17s16 6 18 17"/></svg>
+        </span>
+        <h3>Man</h3>
+        <p class="face-sub">Spiritual Order; the Face of God</p>
+      </article>
+      <article class="face-card reveal" style="--face:#2F5D62">
+        <span class="face-emblem" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 14c-5 0-9 4-9 9 0 3 1 5 3 7l-14 14c8 2 16 1 22-3 6 4 14 5 22 3L42 30c2-2 3-4 3-7 0-5-4-9-9-9h-4z"/><path d="M30 22h.1" stroke-width="4.5"/><path d="M32 14l-3-6"/></svg>
+        </span>
+        <h3>Eagle</h3>
+        <p class="face-sub">Spiritual sight; operating in God's light</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="beliefs" id="beliefs" aria-labelledby="beliefs-h">
+  <div class="container beliefs-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Our Foundation</p>
+      <h2 id="beliefs-h">What we believe</h2>
+      <p>The Bible as the Word of God — <em>“organic, perennial, and applicable to every age.”</em></p>
+    </div>
+    <ul class="beliefs-list">
+      <li class="reveal"><span class="belief-num" aria-hidden="true">1</span><div><h3>One God</h3><p>We believe in one God, revealed to us in His fullness.</p></div></li>
+      <li class="reveal"><span class="belief-num" aria-hidden="true">2</span><div><h3>Jesus Christ as Lord</h3><p>And the Chief Apostle — the center of everything we are.</p></div></li>
+      <li class="reveal"><span class="belief-num" aria-hidden="true">3</span><div><h3>Repentance &amp; Water Baptism</h3><p>In the Name of Jesus — Acts 2:38, the verse behind our name, <strong>axe238</strong>.</p></div></li>
+      <li class="reveal"><span class="belief-num" aria-hidden="true">4</span><div><h3>The Gift of the Holy Ghost</h3><p>The promise is to you, and to your children, and to all that are afar off.</p></div></li>
+      <li class="reveal"><span class="belief-num" aria-hidden="true">5</span><div><h3>The Bible as the Word of God</h3><p>Organic, perennial, and applicable to every age.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+.doors{padding-top:2rem}
+.door-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.door-card{background:var(--white);border-radius:var(--r-xl);padding:0 1.8rem 2rem;box-shadow:var(--shadow-soft);border:1.5px solid var(--cream-3);transition:translate .35s var(--spring),box-shadow .3s ease;display:flex;flex-direction:column}
+.door-card:hover{translate:0 -6px;box-shadow:var(--shadow-deep)}
+.door-art{border-radius:120px 120px 20px 20px;margin:1.4rem 0 1.5rem;padding:2.2rem 0 1.6rem;display:grid;place-items:center}
+.door-art svg{width:84px;height:84px;transition:transform .35s var(--spring-pop)}
+.door-card:hover .door-art svg{transform:scale(1.08) rotate(-2deg)}
+.door-art-terra{background:linear-gradient(160deg,var(--terracotta-soft),#F2D9CB);color:var(--terracotta-deep)}
+.door-art-sage{background:linear-gradient(160deg,var(--sage-soft),#E2E8DA);color:var(--sage-deep)}
+.door-art-ochre{background:linear-gradient(160deg,var(--ochre-soft),#F6E8C8);color:#A87718}
+.door-card h3{font-size:1.45rem;margin-bottom:.5rem}
+.door-card p{color:var(--ink-soft);font-size:.97rem;margin-bottom:1.2rem}
+.door-link{margin-top:auto;font-family:var(--font-display);font-weight:700;text-decoration:none;color:var(--terracotta-deep);display:inline-flex;align-items:center;gap:.4rem}
+.door-link span{transition:transform .2s ease}
+.door-link:hover span{transform:translateX(4px)}
+.door-link:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:860px){.door-grid{grid-template-columns:1fr;max-width:440px;margin-inline:auto}}
+.welcome{padding:4rem 0}
+.welcome-inner{background:linear-gradient(150deg,var(--cream-2),#F6EFE3);border-radius:36px;text-align:center;padding:4.4rem 2rem 4rem;position:relative}
+.welcome-sun{position:absolute;top:-34px;left:calc(50% - 36px);display:inline-grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--white);color:var(--ochre);box-shadow:var(--shadow-lift)}
+.welcome-sun svg{width:40px;height:40px}
+@media (prefers-reduced-motion:no-preference){.welcome-sun{animation:sunRock 7s ease-in-out infinite alternate}}
+@keyframes sunRock{from{rotate:-5deg}to{rotate:5deg}}
+.welcome-inner h2{font-size:clamp(1.8rem,4vw,2.6rem);max-width:560px;margin:0 auto .9rem}
+.welcome-inner p{font-size:1.15rem;color:var(--ink-soft);max-width:520px;margin-inline:auto}
+.faces-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.face-card{background:var(--white);border-radius:var(--r-lg);padding:2rem 1.5rem 1.8rem;border:1.5px solid var(--cream-3);border-top:5px solid var(--face);box-shadow:var(--shadow-soft);text-align:center;transition:translate .35s var(--spring),rotate .35s var(--spring),box-shadow .3s ease}
+.faces-grid .face-card:nth-child(1){rotate:-1.3deg}
+.faces-grid .face-card:nth-child(2){rotate:1deg}
+.faces-grid .face-card:nth-child(3){rotate:-.7deg}
+.faces-grid .face-card:nth-child(4){rotate:1.4deg}
+.face-card:hover{translate:0 -6px;rotate:0deg;box-shadow:var(--shadow-deep)}
+.face-card:hover .face-emblem{animation:emblemBob .65s var(--spring-pop)}
+@keyframes emblemBob{0%{transform:none}40%{transform:translateY(-6px) rotate(-3deg)}75%{transform:translateY(1px)}100%{transform:none}}
+.face-emblem{display:inline-grid;place-items:center;width:88px;height:88px;border-radius:50%;color:var(--face);background:color-mix(in srgb,var(--face) 11%,var(--white));margin-bottom:1.2rem}
+.face-emblem svg{width:52px;height:52px}
+.face-card h3{font-size:1.35rem;color:var(--face);margin-bottom:.35rem;letter-spacing:.02em}
+.face-sub{font-size:.92rem;color:var(--ink-soft);line-height:1.5}
+@media (max-width:1000px){.faces-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.faces-grid{grid-template-columns:1fr;max-width:380px;margin-inline:auto}}
+.beliefs{background:var(--sage-deep);color:var(--cream);border-radius:48px 48px 0 0}
+.beliefs .eyebrow{color:var(--ochre)}
+.beliefs .eyebrow::before{background:var(--ochre)}
+.beliefs .section-head p{color:#D9E0D2}
+.beliefs-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem}
+.beliefs-list li{display:flex;gap:1.1rem;background:rgba(250,246,240,.08);border:1.5px solid rgba(250,246,240,.14);border-radius:var(--r-lg);padding:1.5rem 1.6rem}
+.belief-num{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ochre);color:var(--ink);font-family:var(--font-display);font-weight:800;font-size:1.15rem}
+.beliefs-list h3{font-size:1.15rem;margin-bottom:.3rem;color:#fff}
+.beliefs-list p{font-size:.94rem;color:#D9E0D2}
+.beliefs-list strong{color:var(--ochre)}
+@media (max-width:760px){.beliefs-list{grid-template-columns:1fr}}
+</style>
+<section class="visit" id="visit" aria-labelledby="visit-h">
+  <div class="container visit-grid">
+    <div class="visit-copy reveal">
+      <p class="eyebrow">This Sunday</p>
+      <h2 id="visit-h">Come as you are.<br>We'll keep the light on.</h2>
+      <ul class="times-list">
+        <li><span class="time-pill">10:00 AM</span><div><h3>Sunday School</h3><p>For every age — start the morning in the Word.</p></div></li>
+        <li><span class="time-pill">11:00 AM</span><div><h3>Sunday Worship</h3><p>The full gospel experience.</p></div></li>
+        <li><span class="time-pill">7:00 PM</span><div><h3>Wednesday Service</h3><p>Midweek teaching and prayer.</p></div></li>
+      </ul>
+      <a class="btn btn-primary" href="#">Plan Your Visit</a>
+    </div>
+    <div class="visit-map reveal" role="img" aria-label="Map placeholder showing 80 Ferry Blvd, Stratford CT">
+      <div class="map-canvas" aria-hidden="true">
+        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="320" fill="#EFE8DB"/>
+          <g stroke="#DCD2C0" stroke-width="10" stroke-linecap="round">
+            <path d="M-10 90 H410"/><path d="M-10 210 H410"/><path d="M110 -10 V330"/><path d="M290 -10 V330"/>
+          </g>
+          <g stroke="#E6DECF" stroke-width="5"><path d="M-10 150 H410"/><path d="M200 -10 V330"/></g>
+          <path d="M-10 270 C 90 240, 220 300, 410 255 V330 H-10 Z" fill="#C9D4BE"/>
+          <circle cx="200" cy="150" r="34" fill="#C96F4A" opacity=".18"/>
+        </svg>
+        <span class="map-pin">
+          <svg viewBox="0 0 24 24" fill="none" width="30" height="30"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" fill="#C96F4A"/><circle cx="12" cy="9" r="2.6" fill="#FAF6F0"/></svg>
+        </span>
+      </div>
+      <address class="map-address">
+        <strong>Church of Philadelphia</strong>
+        80 Ferry Blvd, 2nd Floor, Room 202<br>Stratford, CT 06615
+      </address>
+    </div>
+  </div>
+</section>
+
+<section class="give" id="give" aria-labelledby="give-h">
+  <div class="container give-card reveal">
+    <span class="give-emblem" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 52S10 39 10 24c0-7 5-12 11-12 5 0 9 3 11 7 2-4 6-7 11-7 6 0 11 5 11 12 0 15-22 28-22 28z"/></svg>
+    </span>
+    <h2 id="give-h">Give to the Church</h2>
+    <p class="give-verse">“…for God loveth a cheerful giver.” <cite>— 2 Corinthians 9:7</cite></p>
+    <div class="give-actions">
+      <a class="btn btn-primary" href="#">Give with Rebel Give</a>
+      <a class="btn btn-sage" href="#">Give with Zelle</a>
+    </div>
+    <p class="give-privacy">
+      <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg>
+      Secure &amp; encrypted. We will never share your personal or financial information with anyone, for any reason.
+    </p>
+  </div>
+</section>
+
+<section class="key-band" aria-labelledby="key-h">
+  <div class="key-glow" aria-hidden="true"></div>
+  <div class="container key-inner reveal">
+    <p class="eyebrow key-eyebrow">End Time Dominion</p>
+    <span class="key-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="12"/><circle cx="22" cy="22" r="4.5"/><path d="M30 31l22 22"/><path d="M44 45l6-6M50 51l6-6"/></svg>
+    </span>
+    <h2 id="key-h">“He shall open, and none shall shut.”</h2>
+    <p class="key-ref">Isaiah 22:22 · Revelation 3:7</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#top" aria-label="Philadelphia — home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40" fill="none"><path d="M8 36V18c0-6.6 5.4-12 12-12s12 5.4 12 12v18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 36V22c0-2.2 1.8-4 4-4s4 1.8 4 4v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-name">Philadelphia</span>
+      </a>
+      <p class="footer-tag">A church of the open door.</p>
+      <address>80 Ferry Blvd, 2nd Floor, Room 202<br>Stratford, CT 06615</address>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#new">I'm New</a></li>
+        <li><a href="#faces">Teachings</a></li>
+        <li><a href="#watch">Watch</a></li>
+        <li><a href="#beliefs">Beliefs</a></li>
+        <li><a href="#give">Give</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h3>Gather With Us</h3>
+      <ul>
+        <li>Sunday School · 10:00 AM</li>
+        <li>Sunday Worship · 11:00 AM</li>
+        <li>Wednesday Service · 7:00 PM</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Reach Us</h3>
+      <ul>
+        <li><a href="tel:+14752214673">(475) 221-4673</a></li>
+        <li><a href="mailto:philly238@gmail.com">philly238@gmail.com</a></li>
+        <li><a href="#">YouTube @axe.238</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Church of Philadelphia</p>
+  </div>
+</footer>
+
+<style>
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.visit-copy h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:.7rem 0 1.8rem}
+.times-list{list-style:none;display:grid;gap:1.1rem;margin-bottom:2rem}
+.times-list li{display:flex;align-items:flex-start;gap:1.1rem}
+.time-pill{flex:none;font-family:var(--font-display);font-weight:700;font-size:.88rem;background:var(--white);border:1.5px solid var(--cream-3);border-radius:var(--r-pill);padding:.45rem 1rem;box-shadow:0 2px 8px rgba(61,51,43,.05);margin-top:.15rem}
+.times-list h3{font-size:1.12rem}
+.times-list p{color:var(--ink-soft);font-size:.93rem}
+.visit-map{background:var(--white);border:1.5px solid var(--cream-3);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-soft)}
+.map-canvas{position:relative}
+.map-canvas svg{width:100%;height:auto}
+.map-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-90%);filter:drop-shadow(0 6px 10px rgba(61,51,43,.3))}
+.map-address{font-style:normal;padding:1.3rem 1.6rem;color:var(--ink-soft);font-size:.95rem;line-height:1.6;border-top:1.5px dashed var(--cream-3)}
+.map-address strong{display:block;font-family:var(--font-display);color:var(--ink);font-size:1.05rem;margin-bottom:.15rem}
+@media (max-width:900px){.visit-grid{grid-template-columns:1fr;gap:2.6rem}}
+.give{padding-top:1rem}
+.give-card{background:var(--white);border:1.5px solid var(--cream-3);border-radius:36px;box-shadow:var(--shadow-soft);text-align:center;padding:4rem 2rem;max-width:760px}
+.give-emblem{display:inline-grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--terracotta-soft);color:var(--terracotta-deep);margin-bottom:1.3rem}
+.give-emblem svg{width:42px;height:42px}
+.give-card h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.8rem}
+.give-verse{font-style:italic;color:var(--ink-soft);font-size:1.1rem;margin-bottom:1.8rem}
+.give-verse cite{font-style:normal;font-family:var(--font-display);font-weight:700;font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:var(--terracotta-deep)}
+.give-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem;margin-bottom:1.6rem}
+.give-privacy{display:flex;align-items:flex-start;justify-content:center;gap:.5rem;font-size:.83rem;color:var(--ink-faint);max-width:480px;margin-inline:auto;text-align:left}
+.give-privacy svg{flex:none;margin-top:.2rem;color:var(--sage-deep)}
+.key-band{position:relative;background:var(--ink);color:var(--cream);text-align:center;overflow:hidden;border-radius:48px;margin:2rem clamp(.75rem,3vw,2.5rem) 0;padding:6rem 1.5rem}
+.key-glow{position:absolute;inset:auto;top:-160px;left:50%;transform:translateX(-50%);width:560px;height:380px;background:radial-gradient(ellipse at center,rgba(217,164,65,.34),transparent 65%);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.key-glow{animation:glowBreathe 9s ease-in-out infinite alternate}}
+@keyframes glowBreathe{from{opacity:.72}to{opacity:1}}
+.key-inner{position:relative}
+.key-eyebrow{color:var(--ochre)}
+.key-eyebrow::before{background:var(--ochre)}
+.key-icon{display:inline-grid;place-items:center;width:80px;height:80px;border-radius:50%;border:2px solid rgba(217,164,65,.4);color:var(--ochre);margin:1.5rem 0 1.6rem}
+.key-icon svg{width:42px;height:42px}
+.key-band h2{font-size:clamp(1.9rem,4.6vw,3.1rem);color:#fff;max-width:680px;margin:0 auto 1rem}
+.key-ref{font-family:var(--font-display);font-weight:700;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ochre)}
+.site-footer{padding:5rem 0 2rem;background:var(--cream)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1.5px solid var(--cream-3)}
+.footer-brand .brand{margin-bottom:1rem}
+.footer-tag{font-family:var(--font-display);font-weight:600;color:var(--terracotta-deep);margin-bottom:1rem}
+.footer-brand address{font-style:normal;color:var(--ink-soft);font-size:.92rem;line-height:1.7}
+.footer-col h3{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1rem}
+.footer-col ul{list-style:none;display:grid;gap:.55rem;font-size:.95rem;color:var(--ink-soft)}
+.footer-col a{text-decoration:none;color:var(--ink-soft)}
+.footer-col a:hover{color:var(--terracotta-deep);text-decoration:underline;text-underline-offset:4px}
+.footer-bottom{padding-top:1.6rem;font-size:.85rem;color:var(--ink-faint)}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.footer-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var nav=document.getElementById('mainNav');
+  toggle.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+  });
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -48px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
+</body>
+</html>
