@@ -27,13 +27,16 @@
   .brand{display:flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:1.3rem;text-decoration:none;color:var(--ink)}
   .topbar .right{margin-left:auto;font-family:var(--label);letter-spacing:.1em;font-size:.72rem;color:var(--ink-soft);text-transform:uppercase}
   section{padding:clamp(3.5rem,7vw,5rem) 0}
-  /* numbered list — least (1) to greatest (8) */
-  .levels{max-width:680px;margin:2.4rem auto 0;list-style:none;padding:0}
-  .levels li{display:grid;grid-template-columns:54px 1fr;gap:1.2rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+  /* ranked list — highest at top; visual weight fades downward (no numbers) */
+  .levels{position:relative;max-width:660px;margin:2.6rem auto 0;list-style:none;padding:0}
+  .levels::before{content:"";position:absolute;left:11px;top:16px;bottom:16px;width:2px;
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold) 28%,rgba(154,110,32,.16))}
+  .levels li{position:relative;display:grid;grid-template-columns:24px 1fr;gap:1.2rem;align-items:center;padding:.95rem 0;border-bottom:1px solid var(--line)}
   .levels li:last-child{border-bottom:none}
-  .levels .num{font-family:var(--display);font-size:1.9rem;color:var(--gold-deep);text-align:center;line-height:1}
-  .levels p{margin:0;font-size:1.12rem;color:var(--ink)}
-  .levels .tier{display:block;font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--gold-label);margin-bottom:.2rem}
+  .levels .mark{position:relative;z-index:1;margin:0 auto;border-radius:50%;background:var(--gold);
+    width:calc(7px + var(--s)*13px);height:calc(7px + var(--s)*13px);
+    opacity:calc(.35 + var(--s)*.65);box-shadow:0 0 0 5px var(--bg)}
+  .levels p{margin:0;color:var(--ink);font-size:calc(1rem + var(--s)*.16rem);opacity:calc(.62 + var(--s)*.38)}
   /* give methods */
   .give{margin-top:3.2rem;text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:2.4rem 1.5rem}
   .give h2{font-family:var(--display);font-weight:500;font-size:2rem;margin:.4rem 0 .2rem}
@@ -58,14 +61,14 @@
   <p class="verse">"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver."</p>
 
   <ol class="levels">
-    <li><span class="num">1</span><p>He who helps another become self-sufficient — so they no longer need to be given to.</p></li>
-    <li><span class="num">2</span><p>He who gives in secret — neither knowing the other.</p></li>
-    <li><span class="num">3</span><p>He who gives without knowing who receives — though the recipient knows him.</p></li>
-    <li><span class="num">4</span><p>He who gives knowing who receives — though they do not know him.</p></li>
-    <li><span class="num">5</span><p>He who gives before he is asked.</p></li>
-    <li><span class="num">6</span><p>He who gives only after he is asked.</p></li>
-    <li><span class="num">7</span><p>He who gives less than he should — but gives it gladly.</p></li>
-    <li><span class="num">8</span><p>He who gives grudgingly.</p></li>
+    <li style="--s:1"><span class="mark"></span><p>He who helps another become self-sufficient — so they no longer need to be given to.</p></li>
+    <li style="--s:.88"><span class="mark"></span><p>He who gives in secret — neither knowing the other.</p></li>
+    <li style="--s:.76"><span class="mark"></span><p>He who gives without knowing who receives — though the recipient knows him.</p></li>
+    <li style="--s:.64"><span class="mark"></span><p>He who gives knowing who receives — though they do not know him.</p></li>
+    <li style="--s:.52"><span class="mark"></span><p>He who gives before he is asked.</p></li>
+    <li style="--s:.40"><span class="mark"></span><p>He who gives only after he is asked.</p></li>
+    <li style="--s:.28"><span class="mark"></span><p>He who gives less than he should — but gives it gladly.</p></li>
+    <li style="--s:.16"><span class="mark"></span><p>He who gives grudgingly.</p></li>
   </ol>
 
   <div class="give">
