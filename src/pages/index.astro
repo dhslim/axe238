@@ -3,18 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 
 const faces = [
-  { name: 'Lion', sub: 'Strength', desc: 'Righteousness, Boldness & Protection', accent: 'var(--color-lion)', slug: 'face-of-a-lion' },
-  { name: 'Ox', sub: 'Labor', desc: 'The Work of God; perennial strength', accent: 'var(--color-ox)', slug: 'face-of-an-ox' },
-  { name: 'Man', sub: 'Order', desc: 'Spiritual Order; the Face of God', accent: 'var(--color-man)', slug: 'face-of-a-man' },
-  { name: 'Eagle', sub: 'Sight', desc: 'Spiritual sight; operating in God’s light', accent: 'var(--color-eagle)', slug: 'face-of-an-eagle' },
+  { name: 'Lion', sub: 'Strength', desc: 'Righteousness, Boldness & Protection', accent: 'var(--color-lion)', slug: 'face-of-a-lion',
+    img: 'lion.jpg', pos: '60% 52%', tone: '', alt: 'Weathered limestone statue of a recumbent lion (Greek, 380–246 BCE, Cleveland Museum of Art)' },
+  { name: 'Ox', sub: 'Labor', desc: 'The Work of God; perennial strength', accent: 'var(--color-ox)', slug: 'face-of-an-ox',
+    img: 'ox.jpg', pos: '32% 46%', tone: '', alt: 'Worn marble capital fragment with the winged Ox of Saint Luke (c. 1175–1200, Cleveland Museum of Art)' },
+  { name: 'Man', sub: 'Order', desc: 'Spiritual Order; the Face of God', accent: 'var(--color-man)', slug: 'face-of-a-man',
+    img: 'man.jpg', pos: '50% 16%', tone: 'tone-deep', alt: 'Weathered limestone statue of Saint Michael the Archangel (c. 1280, Cleveland Museum of Art)' },
+  { name: 'Eagle', sub: 'Sight', desc: 'Spiritual sight; operating in God’s light', accent: 'var(--color-eagle)', slug: 'face-of-an-eagle',
+    img: 'eagle.jpg', pos: '46% 38%', tone: '', alt: 'Bronze imperial eagle with green patina (Roman, 100 BCE–100 CE, Cleveland Museum of Art)' },
 ];
-
-const faceIcon: Record<string, string> = {
-  Lion: '<circle cx="12" cy="13" r="6"/><path d="M12 2v4M7 5l2 3M17 5l-2 3M9 13h.01M15 13h.01M10 16c1 1 3 1 4 0"/>',
-  Ox: '<path d="M5 7c-2 0-3 2-3 4M19 7c2 0 3 2 3 4"/><circle cx="12" cy="14" r="6"/>',
-  Man: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/>',
-  Eagle: '<path d="M12 5c-4 3-8 3-10 2 3 5 6 6 10 6s7-1 10-6c-2 1-6 1-10-2zM12 5v8"/>',
-};
 
 const levels = [
   'He who gives and also assists the recipient in addressing the reason for the need in the first place.',
@@ -89,7 +86,9 @@ const levels = [
       <div class="faces">
         {faces.map((f) => (
           <a class="face" style={`--accent:${f.accent}`} href={`${base}teachings/${f.slug}`}>
-            <span class="em" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">${faceIcon[f.name]}</svg>`} />
+            <span class="plate">
+              <img src={`${base}img/faces/${f.img}`} alt={f.alt} loading="lazy" class={f.tone} style={`object-position:${f.pos}`} />
+            </span>
             <h3>{f.name}</h3>
             <span class="fsub">{f.sub}</span>
             <p>{f.desc}</p>
@@ -219,8 +218,14 @@ const levels = [
   .face { position: relative; padding: 2.6rem 1.4rem; text-align: center; text-decoration: none; color: var(--color-ink); border-left: 1px solid var(--color-line); border-top: 3px solid var(--accent); overflow: hidden; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, var(--color-bg)), var(--color-bg) 72%); transition: transform 0.2s; }
   .face:first-child { border-left: none; }
   .face:hover { transform: translateY(-3px); }
-  .face .em { color: var(--accent); display: block; }
-  .face .em svg { width: 40px; height: 40px; margin: 0 auto 1rem; }
+  /* arched statue plate — the open-door silhouette */
+  .face .plate { display: block; position: relative; aspect-ratio: 3 / 4; margin: 0 auto 1.1rem; border-radius: 999px 999px 6px 6px; overflow: hidden; border: 1px solid var(--color-line); background: var(--color-bg2); }
+  .face .plate::before { content: ''; position: absolute; inset: 7px; border: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent); border-radius: 999px 999px 4px 4px; z-index: 2; pointer-events: none; }
+  .face .plate::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 34%, transparent), transparent 52%); z-index: 1; pointer-events: none; }
+  .face .plate img { width: 100%; height: 100%; object-fit: cover; filter: sepia(0.5) saturate(0.72) contrast(1.03) brightness(1.02); transition: filter 0.35s ease; }
+  .face .plate img.tone-deep { filter: sepia(0.85) saturate(0.55) contrast(1.05) brightness(1.06); }
+  .face:hover .plate img { filter: sepia(0.12) saturate(0.95) contrast(1.02); }
+  .face:hover .plate img.tone-deep { filter: sepia(0.45) saturate(0.7) contrast(1.04) brightness(1.04); }
   .face h3 { font-size: 2rem; }
   .face .fsub { font-family: var(--font-label); letter-spacing: 0.06em; font-size: 0.74rem; color: var(--color-gold-deep); text-transform: uppercase; }
   .face p { color: var(--color-ink-soft); font-size: 0.95rem; margin: 0.6rem 0 0; }
