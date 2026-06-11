@@ -1,0 +1,46 @@
+---
+import Logo from './Logo.astro';
+const base = import.meta.env.BASE_URL;
+const nav = [
+  { label: "I'm New", href: `${base}#visit` },
+  { label: 'Teachings', href: `${base}teachings` },
+  { label: 'Watch', href: `${base}#watch` },
+  { label: 'Beliefs', href: `${base}#beliefs` },
+  { label: 'Give', href: `${base}#give` },
+  { label: 'Contact', href: `${base}#contact` },
+];
+---
+<header class="site">
+  <div class="wrap nav">
+    <Logo />
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" data-menu>☰</button>
+    <ul class="links" data-links>
+      {nav.map((n) => (
+        <li><a class="link" href={n.href}>{n.label}</a></li>
+      ))}
+      <li><a class="btn cta" href={`${base}#visit`}>Plan Your Visit</a></li>
+    </ul>
+  </div>
+</header>
+<script>
+  const btn = document.querySelector('[data-menu]');
+  const links = document.querySelector('[data-links]');
+  btn?.addEventListener('click', () => {
+    const open = links?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(Boolean(open)));
+  });
+</script>
+<style>
+  .site { position: sticky; top: 0; z-index: 40; background: rgba(250, 244, 230, 0.85); backdrop-filter: blur(9px); border-bottom: 1px solid var(--color-line); }
+  .nav { display: flex; align-items: center; gap: 1.4rem; height: 74px; }
+  .links { display: flex; gap: 1.4rem; list-style: none; margin: 0 0 0 auto; padding: 0; align-items: center; }
+  .link { font-family: var(--font-label); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.82rem; color: var(--color-ink-soft); text-decoration: none; }
+  .link:hover { color: var(--color-gold-deep); }
+  .cta { font-size: 0.8rem; }
+  .menu-btn { display: none; margin-left: auto; background: none; border: 1px solid var(--color-gold-deep); color: var(--color-gold-deep); padding: 0.45rem 0.7rem; cursor: pointer; font-family: var(--font-label); border-radius: 3px; }
+  @media (max-width: 900px) {
+    .links { display: none; }
+    .menu-btn { display: block; }
+    .links.open { display: flex; position: absolute; top: 74px; left: 0; right: 0; flex-direction: column; align-items: center; gap: 0.7rem; background: var(--color-bg); border-bottom: 1px solid var(--color-line); padding: 1.2rem; }
+  }
+</style>

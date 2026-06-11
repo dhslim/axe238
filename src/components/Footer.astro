@@ -1,0 +1,42 @@
+---
+import Logo from './Logo.astro';
+---
+<footer class="foot" id="contact">
+  <div class="wrap fgrid">
+    <div>
+      <Logo />
+      <p class="addr">A church of the open door, in Stratford, Connecticut.<br />80 Ferry Blvd, 2nd Floor, Room 202<br />Stratford, CT 06615</p>
+    </div>
+    <div>
+      <h4>Gather</h4>
+      <ul>
+        <li>Sunday School — 10:00 AM</li>
+        <li>Sunday Worship — 11:00 AM</li>
+        <li>Wednesday — 7:00 PM</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="tel:+14752214673">(475) 221-4673</a></li>
+        <li><a href="mailto:philly238@gmail.com">philly238@gmail.com</a></li>
+        <li><a href="https://www.youtube.com/@axe.238" rel="noopener">YouTube @axe.238</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap fbot">
+    <span>© 2026 Church of Philadelphia</span>
+    <span>He shall open, and none shall shut.</span>
+  </div>
+</footer>
+<style>
+  .foot { border-top: 2px solid var(--color-gold); background: var(--color-bg2); padding: 3.5rem 0 2rem; margin-top: 2rem; }
+  .fgrid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2rem; }
+  .addr { color: var(--color-ink-soft); max-width: 34ch; margin: 1rem 0 0; }
+  .fgrid h4 { font-family: var(--font-label); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8rem; color: var(--color-gold-deep); margin: 0 0 1rem; }
+  .fgrid ul { list-style: none; padding: 0; margin: 0; line-height: 2.1; color: var(--color-ink-soft); }
+  .fgrid a { text-decoration: none; }
+  .fgrid a:hover { color: var(--color-gold-deep); }
+  .fbot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-top: 2.4rem; padding-top: 1.3rem; border-top: 1px solid var(--color-line); color: var(--color-ink-soft); font-family: var(--font-label); letter-spacing: 0.06em; font-size: 0.78rem; }
+  @media (max-width: 760px) { .fgrid { grid-template-columns: 1fr; } }
+</style>

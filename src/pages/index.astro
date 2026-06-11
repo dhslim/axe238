@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const faces = [
+  { name: 'Lion', sub: 'Strength', desc: 'Righteousness, Boldness & Protection', accent: 'var(--color-lion)', slug: 'face-of-a-lion' },
+  { name: 'Ox', sub: 'Labor', desc: 'The Work of God; perennial strength', accent: 'var(--color-ox)', slug: 'face-of-an-ox' },
+  { name: 'Man', sub: 'Order', desc: 'Spiritual Order; the Face of God', accent: 'var(--color-man)', slug: 'face-of-a-man' },
+  { name: 'Eagle', sub: 'Sight', desc: 'Spiritual sight; operating in God’s light', accent: 'var(--color-eagle)', slug: 'face-of-an-eagle' },
+];
+
+const faceIcon: Record<string, string> = {
+  Lion: '<circle cx="12" cy="13" r="6"/><path d="M12 2v4M7 5l2 3M17 5l-2 3M9 13h.01M15 13h.01M10 16c1 1 3 1 4 0"/>',
+  Ox: '<path d="M5 7c-2 0-3 2-3 4M19 7c2 0 3 2 3 4"/><circle cx="12" cy="14" r="6"/>',
+  Man: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/>',
+  Eagle: '<path d="M12 5c-4 3-8 3-10 2 3 5 6 6 10 6s7-1 10-6c-2 1-6 1-10-2zM12 5v8"/>',
+};
+
+const levels = [
+  'He who gives and also assists the recipient in addressing the reason for the need in the first place.',
+  'He who gives without knowing who will receive — and without the recipient knowing who gave it.',
+  'He who gives and knows who will receive it — but the recipient will not know who gave it.',
+  'He who gives and does not know who receives — but the recipient knows who gave it.',
+  'He who gives enough and before he is asked — but with both parties knowing each other.',
+  'He who gives enough — but only after he is asked.',
+  'He who does not give enough — but what he gives, he gives graciously.',
+  'He who does not give enough — and even that unwillingly.',
+];
+---
+<BaseLayout>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="halo" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none" stroke="var(--color-gold-deep)" stroke-width="1">
+        <circle cx="150" cy="150" r="120" /><circle cx="150" cy="150" r="92" /><circle cx="150" cy="150" r="64" />
+        <path d="M150 30v240M30 150h240M66 66l168 168M234 66L66 234" />
+      </svg>
+    </div>
+    <div class="wrap">
+      <svg class="door-svg" width="64" height="86" viewBox="0 0 64 86" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path d="M8 84V32a24 24 0 0 1 48 0v52" /><path d="M2 84h60" />
+        <path d="M32 84V40" stroke-opacity=".6" /><circle cx="42" cy="58" r="1.6" fill="currentColor" stroke="none" />
+      </svg>
+      <span class="label">The Church of Philadelphia</span>
+      <h1>A church of the open door</h1>
+      <p class="verse">“Behold, I have set before thee an open door, and no man can shut it.”</p>
+      <p class="cite">REVELATION 3:8</p>
+      <div class="cta-row">
+        <a class="btn" href="#visit">Plan Your Visit</a>
+        <a class="btn btn--ghost" href="#watch">Watch a Teaching</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE DOORS -->
+  <section class="pt0">
+    <div class="wrap doors">
+      <a class="door" href="#visit">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M4 21h16" /><circle cx="15" cy="12" r="1" /></svg></span>
+        <h3>I'm New</h3><p>Plan your first visit.</p>
+      </a>
+      <a class="door" href="#watch">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none" /></svg></span>
+        <h3>Watch</h3><p>Teachings on @axe.238.</p>
+      </a>
+      <a class="door" href="#beliefs">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" /></svg></span>
+        <h3>We Believe</h3><p>Our statement of faith.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- WELCOME -->
+  <section class="welcome">
+    <div class="wrap">
+      <span class="label">Welcome</span>
+      <hr class="rule center" />
+      <p>“Whoever you are, the door is open. We are a family bound by brotherly love, gathering in Stratford to know Jesus and grow in His Spirit.”</p>
+    </div>
+  </section>
+
+  <!-- FOUR FACES -->
+  <section id="teachings-preview">
+    <div class="wrap">
+      <div class="center mb">
+        <span class="label">Alpha Ministry</span>
+        <h2>The Four Faces</h2>
+      </div>
+      <div class="faces">
+        {faces.map((f) => (
+          <a class="face" style={`--accent:${f.accent}`} href={`${base}teachings/${f.slug}`}>
+            <span class="em" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">${faceIcon[f.name]}</svg>`} />
+            <h3>{f.name}</h3>
+            <span class="fsub">{f.sub}</span>
+            <p>{f.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BELIEFS -->
+  <section id="beliefs" class="beliefs">
+    <div class="wrap center">
+      <span class="label">What We Believe</span>
+      <hr class="rule center" />
+      <p>One God; Jesus Christ as Lord and the Chief Apostle; Repentance and Water Baptism in the Name of Jesus; the Gift of the Holy Ghost; and the Bible as the Word of God — <em class="gold">organic, perennial, and applicable to every age.</em></p>
+    </div>
+  </section>
+
+  <!-- THIS SUNDAY / VISIT -->
+  <section id="visit">
+    <div class="wrap sunday">
+      <div>
+        <span class="label">This Sunday</span>
+        <h2>Come join us</h2>
+        <div class="panel">
+          <ul class="times">
+            <li><b>Sunday School</b><span>10:00 AM</span></li>
+            <li><b>Sunday Worship</b><span>11:00 AM</span></li>
+            <li><b>Wednesday Service</b><span>7:00 PM</span></li>
+          </ul>
+          <p class="addr">80 Ferry Blvd, 2nd Floor, Room 202 · Stratford, CT 06615</p>
+          <a class="btn" href="#visit">Plan Your Visit</a>
+        </div>
+      </div>
+      <div class="mapph">📍 80 Ferry Blvd, 2nd Fl, Room 202<br />Stratford, CT 06615</div>
+    </div>
+  </section>
+
+  <!-- WATCH -->
+  <section id="watch" class="watch">
+    <div class="wrap center mb">
+      <span class="label">Watch</span>
+      <h2>Teachings &amp; sermons</h2>
+      <p class="sub">Our messages live on YouTube — <a href="https://www.youtube.com/@axe.238" rel="noopener">@axe.238</a>.</p>
+    </div>
+    <div class="wrap sermons">
+      {['The Four Faces of the Alpha Ministry', 'End Time Dominion', 'Face of a Lion'].map((t) => (
+        <div class="sermon">
+          <div class="thumb"><span class="play" aria-hidden="true"></span></div>
+          <p>{t}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- GIVE -->
+  <section id="give" class="give-sec">
+    <div class="wrap">
+      <div class="center mb"><h2>The Eight Levels of Giving</h2></div>
+      <ol class="levels">
+        {levels.map((text, i) => (
+          <li style={`--s:${(1 - i * 0.12).toFixed(2)}`}><span class="mark"></span><p>{text}</p></li>
+        ))}
+      </ol>
+
+      <div class="give">
+        <span class="label">Give to the Church</span>
+        <p class="verse give-verse">“…for God loveth a cheerful giver.”<br /><span class="cite-sm">2 CORINTHIANS 9:7</span></p>
+        <h3 class="give-h">Two simple ways</h3>
+        <div class="methods">
+          <a class="btn" href="#">Give with Rebel Give</a>
+          <a class="btn btn--ghost" href="#">Give with Zelle</a>
+        </div>
+        <small>Secure &amp; encrypted. We will never share your personal or financial information with anyone, for any reason.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY OF DAVID (the one dark band) -->
+  <section class="key">
+    <div class="wrap">
+      <div class="keyic" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="8" r="4.5" /><path d="M11 11l9 9M16 16l-2 2M20 20l-2 2" /></svg>
+      </div>
+      <span class="label">End Time Dominion</span>
+      <h2>The Key of David</h2>
+      <p class="verse">“He shall open, and none shall shut.”</p>
+      <p class="cite">ISAIAH 22:22 · REVELATION 3:7</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pt0 { padding-top: 0; }
+  .center { text-align: center; }
+  .mb { margin-bottom: 2.4rem; }
+  .gold { color: var(--color-gold-deep); font-style: italic; }
+
+  /* HERO */
+  .hero { text-align: center; padding-top: clamp(3rem, 7vw, 5.5rem); overflow: hidden; }
+  .hero .halo { position: absolute; top: -26px; left: 50%; transform: translateX(-50%); width: min(86vw, 360px); opacity: 0.2; pointer-events: none; }
+  .hero .halo svg { width: 100%; height: auto; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .door-svg { display: block; margin: 0 auto 1.4rem; color: var(--color-gold-deep); filter: drop-shadow(0 6px 18px rgba(154, 110, 32, 0.25)); }
+  .hero h1 { font-size: clamp(3.2rem, 9vw, 6.6rem); max-width: 14ch; margin: 0 auto; }
+  .hero .verse { font-size: clamp(1.3rem, 2.4vw, 1.7rem); max-width: 30ch; margin: 1.3rem auto 0; }
+  .cite { font-family: var(--font-label); letter-spacing: 0.2em; font-size: 0.72rem; color: var(--color-ink-soft); margin-top: 0.6rem; }
+  .cta-row { display: flex; gap: 0.9rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+
+  /* THREE DOORS */
+  .doors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .door { padding: 2.2rem 1.4rem; text-align: center; text-decoration: none; color: var(--color-ink); background: var(--color-panel); border: 1px solid var(--color-line); border-top: 2px solid var(--color-gold); transition: transform 0.2s, box-shadow 0.2s; }
+  .door:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -22px rgba(120, 90, 30, 0.4); }
+  .door .ic { color: var(--color-gold-deep); display: inline-block; }
+  .door .ic svg { width: 32px; height: 32px; }
+  .door h3 { font-size: 1.7rem; margin: 0.4rem 0 0.3rem; }
+  .door p { margin: 0; color: var(--color-ink-soft); }
+
+  /* WELCOME */
+  .welcome { text-align: center; }
+  .welcome .wrap { max-width: 54ch; }
+  .welcome p { font-family: var(--font-display); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.45; }
+
+  /* FOUR FACES */
+  h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 500; }
+  .faces { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--color-line); }
+  .face { position: relative; padding: 2.6rem 1.4rem; text-align: center; text-decoration: none; color: var(--color-ink); border-left: 1px solid var(--color-line); border-top: 3px solid var(--accent); overflow: hidden; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, var(--color-bg)), var(--color-bg) 72%); transition: transform 0.2s; }
+  .face:first-child { border-left: none; }
+  .face:hover { transform: translateY(-3px); }
+  .face .em { color: var(--accent); display: block; }
+  .face .em svg { width: 40px; height: 40px; margin: 0 auto 1rem; }
+  .face h3 { font-size: 2rem; }
+  .face .fsub { font-family: var(--font-label); letter-spacing: 0.06em; font-size: 0.74rem; color: var(--color-gold-deep); text-transform: uppercase; }
+  .face p { color: var(--color-ink-soft); font-size: 0.95rem; margin: 0.6rem 0 0; }
+
+  /* BELIEFS */
+  .beliefs { background: var(--color-bg2); }
+  .beliefs .wrap { max-width: 62ch; }
+  .beliefs p { font-size: 1.25rem; color: var(--color-ink-soft); }
+
+  /* THIS SUNDAY */
+  .sunday { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; align-items: center; }
+  .panel { background: var(--color-panel); border: 1px solid var(--color-line); padding: 2rem; }
+  .times { list-style: none; padding: 0; margin: 1rem 0 0; }
+  .times li { display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid var(--color-line); }
+  .times b { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; }
+  .times span { color: var(--color-gold-deep); font-family: var(--font-label); letter-spacing: 0.05em; }
+  .addr { color: var(--color-ink-soft); margin: 1rem 0 1.2rem; }
+  .mapph { aspect-ratio: 1 / 1; border: 1px solid var(--color-gold-deep); display: flex; align-items: center; justify-content: center; text-align: center; padding: 1.2rem; color: var(--color-ink-soft); background: radial-gradient(circle at 50% 38%, rgba(212, 165, 60, 0.16), transparent 60%), var(--color-panel); }
+
+  /* WATCH */
+  .watch .sub a { color: var(--color-gold-deep); }
+  .sermons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .sermon .thumb { aspect-ratio: 16 / 9; border: 1px solid var(--color-line); background: radial-gradient(circle at 50% 50%, rgba(212, 165, 60, 0.14), var(--color-bg2)); display: flex; align-items: center; justify-content: center; }
+  .sermon .play { width: 0; height: 0; border-left: 18px solid var(--color-gold-deep); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+  .sermon p { font-family: var(--font-display); font-size: 1.2rem; margin: 0.6rem 0 0; }
+
+  /* GIVE */
+  .give-sec .wrap { max-width: 820px; }
+  .levels { position: relative; max-width: 660px; margin: 2.4rem auto 0; list-style: none; padding: 0; }
+  .levels::before { content: ''; position: absolute; left: 11px; top: 16px; bottom: 16px; width: 2px; background: linear-gradient(180deg, var(--color-gold-bright), var(--color-gold) 28%, rgba(154, 110, 32, 0.16)); }
+  .levels li { position: relative; display: grid; grid-template-columns: 24px 1fr; gap: 1.2rem; align-items: center; padding: 0.95rem 0; border-bottom: 1px solid var(--color-line); }
+  .levels li:last-child { border-bottom: none; }
+  .levels .mark { position: relative; z-index: 1; margin: 0 auto; border-radius: 50%; background: var(--color-gold); width: calc(7px + var(--s) * 13px); height: calc(7px + var(--s) * 13px); opacity: calc(0.35 + var(--s) * 0.65); box-shadow: 0 0 0 5px var(--color-bg); }
+  .levels p { margin: 0; color: var(--color-ink); font-size: calc(1rem + var(--s) * 0.16rem); opacity: calc(0.62 + var(--s) * 0.38); }
+  .give { margin-top: 3.2rem; text-align: center; background: var(--color-bg2); border: 1px solid var(--color-line); border-radius: 4px; padding: 2.4rem 1.5rem; }
+  .give-verse { font-size: 1.16rem; margin: 0.5rem auto 1.1rem; max-width: 38ch; }
+  .cite-sm { font-family: var(--font-label); font-size: 0.66rem; letter-spacing: 0.18em; color: var(--color-ink-soft); }
+  .give-h { font-family: var(--font-display); font-weight: 500; font-size: 2rem; margin: 0.2rem 0; }
+  .methods { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.2rem; }
+  .give small { display: block; margin-top: 1.2rem; color: var(--color-ink-soft); font-size: 0.92rem; }
+
+  /* KEY BAND */
+  .key { text-align: center; background: var(--color-dark); color: var(--color-cream); background-image: radial-gradient(70% 130% at 50% 0, rgba(212, 165, 60, 0.22), transparent 60%); }
+  .key .label { color: var(--color-gold-bright); }
+  .key .keyic { color: var(--color-gold-bright); filter: drop-shadow(0 0 18px rgba(212, 165, 60, 0.45)); margin-bottom: 1rem; }
+  .key h2 { color: #fff; max-width: 14ch; margin: 0.4rem auto; }
+  .key .verse { font-size: 1.4rem; color: var(--color-gold-bright); max-width: 30ch; margin: 0.4rem auto 0; }
+  .key .cite { color: #bcae8e; }
+
+  @media (max-width: 880px) {
+    .doors { grid-template-columns: 1fr; }
+    .faces { grid-template-columns: 1fr 1fr; }
+    .face:nth-child(3) { border-left: none; }
+    .sunday { grid-template-columns: 1fr; }
+    .sermons { grid-template-columns: 1fr; }
+  }
+</style>

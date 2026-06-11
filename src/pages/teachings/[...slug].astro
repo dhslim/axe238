@@ -1,0 +1,40 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const teachings = await getCollection('teachings');
+  return teachings.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'teachings'> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const base = import.meta.env.BASE_URL;
+const accent = entry.data.face ? `var(--color-${entry.data.face})` : 'var(--color-gold)';
+---
+<BaseLayout title={`${entry.data.title} — Philadelphia`} description={entry.data.summary}>
+  <article class="teaching" style={`--accent:${accent}`}>
+    <div class="wrap">
+      <a class="back" href={`${base}teachings`}>← All teachings</a>
+      <span class="label">{entry.data.series}</span>
+      <h1>{entry.data.title}</h1>
+      {entry.data.scripture && <p class="scripture sc">{entry.data.scripture}</p>}
+      <div class="prose"><Content /></div>
+    </div>
+  </article>
+</BaseLayout>
+<style>
+  .teaching .wrap { max-width: 740px; }
+  .back { font-family: var(--font-label); letter-spacing: 0.06em; font-size: 0.8rem; color: var(--color-gold-deep); text-decoration: none; display: inline-block; margin-bottom: 1.4rem; }
+  h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); border-bottom: 3px solid var(--accent); padding-bottom: 0.4rem; display: inline-block; }
+  .sc { font-size: 1.3rem; margin: 1.2rem 0 2rem; max-width: 44ch; }
+  .prose { font-size: 1.15rem; }
+  .prose :global(h2) { font-family: var(--font-display); font-weight: 500; font-size: 1.9rem; margin: 2rem 0 0.6rem; color: var(--color-gold-deep); }
+  .prose :global(p) { margin: 0 0 1.1rem; }
+  .prose :global(ul) { padding-left: 1.2rem; }
+  .prose :global(li) { margin: 0.5rem 0; }
+  .prose :global(strong) { color: var(--color-ink); }
+  .prose :global(em) { color: var(--color-ink-soft); }
+  .prose :global(a) { color: var(--color-gold-deep); }
+</style>

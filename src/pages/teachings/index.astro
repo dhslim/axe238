@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const teachings = (await getCollection('teachings')).sort(
+  (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0)
+);
+const accentFor = (face?: string) => (face ? `var(--color-${face})` : 'var(--color-gold)');
+const kicker = (data: { face?: string; featured: boolean; series: string }) =>
+  data.face ? 'The Four Faces' : data.featured ? 'Featured' : data.series;
+---
+<BaseLayout title="Teachings — Philadelphia" description="The Alpha Ministry teaching library — the Four Faces and more.">
+  <section>
+    <div class="wrap">
+      <div class="center mb">
+        <span class="label">Alpha Ministry</span>
+        <h1>Teachings</h1>
+      </div>
+      <div class="tgrid">
+        {teachings.map((t) => (
+          <a class="tcard" style={`--accent:${accentFor(t.data.face)}`} href={`${base}teachings/${t.id}`}>
+            <span class="label">{kicker(t.data)}</span>
+            <h3>{t.data.title}</h3>
+            <p>{t.data.summary}</p>
+            <span class="more">Read →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .center { text-align: center; }
+  .mb { margin-bottom: 2.4rem; }
+  h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+  .tgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+  .tcard { display: flex; flex-direction: column; text-decoration: none; color: var(--color-ink); background: var(--color-panel); border: 1px solid var(--color-line); border-top: 3px solid var(--accent); padding: 1.6rem 1.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .tcard:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -22px rgba(120, 90, 30, 0.4); }
+  .tcard h3 { font-family: var(--font-display); font-size: 1.7rem; margin: 0.4rem 0 0.4rem; }
+  .tcard p { margin: 0; color: var(--color-ink-soft); font-size: 0.98rem; flex: 1; }
+  .tcard .more { margin-top: 1rem; font-family: var(--font-label); letter-spacing: 0.06em; color: var(--color-gold-deep); font-size: 0.82rem; }
+</style>
