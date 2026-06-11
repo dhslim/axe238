@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Philadelphia — Logo Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond&family=Marcellus&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FAF4E6; --bg2:#F4EAD3; --ink:#2A2014; --ink-soft:#6B5A40;
+    --gold:#C8972E; --gold-deep:#9A6E20; --gold-bright:#D4A53C; --line:#E2D4B2; --dark:#17110A; --cream:#F3E9D2;
+    --display:'Cormorant Garamond',serif; --label:'Marcellus',serif; --body:'EB Garamond',serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.6;
+    background-image:radial-gradient(120% 50% at 50% -6%,rgba(212,165,60,.16),transparent 55%)}
+  .wrap{max-width:1060px;margin:0 auto;padding:3rem 1.5rem 4rem}
+  .label{font-family:var(--label);text-transform:uppercase;letter-spacing:.3em;font-size:.72rem;color:var(--gold-deep)}
+  h1{font-family:var(--display);font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);margin:.3rem 0 .4rem}
+  .intro{color:var(--ink-soft);max-width:64ch;margin:0 0 2.6rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .stage{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:
+    radial-gradient(70% 70% at 50% 38%,rgba(212,165,60,.12),transparent 65%),var(--bg);color:var(--gold-deep)}
+  .stage svg{width:62%;height:auto}
+  .cbody{padding:1.1rem 1.2rem 1.4rem;border-top:1px solid var(--line)}
+  .cbody .tag{font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--gold-deep)}
+  .cbody h3{font-family:var(--display);font-size:1.5rem;margin:.2rem 0 .3rem}
+  .cbody p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+  /* lockups */
+  h2{font-family:var(--display);font-weight:500;font-size:1.8rem;margin:3rem 0 1.2rem}
+  .lockrow{display:flex;flex-wrap:wrap;gap:2.4rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:2rem}
+  .lockup{display:flex;align-items:center;gap:.9rem;color:var(--gold-deep)}
+  .lockup svg{width:64px;height:64px}
+  .lockup .wm{display:flex;flex-direction:column;line-height:1}
+  .lockup .wm .name{font-family:var(--display);font-weight:600;font-size:2rem;color:var(--ink);letter-spacing:.01em}
+  .lockup .wm .sub{font-family:var(--label);text-transform:uppercase;letter-spacing:.26em;font-size:.6rem;color:var(--gold-deep);margin-top:.35rem}
+  /* dark + favicons */
+  .darkstrip{background:var(--dark);border-radius:14px;padding:2.2rem;display:flex;gap:2.4rem;justify-content:center;flex-wrap:wrap;color:var(--gold-bright);
+    background-image:radial-gradient(60% 90% at 50% 0,rgba(212,165,60,.2),transparent 60%)}
+  .darkstrip svg{width:84px;height:84px}
+  .favs{display:flex;gap:1rem;align-items:center;margin-top:1.2rem;flex-wrap:wrap}
+  .fav{width:44px;height:44px;border-radius:9px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:#fff;color:var(--gold-deep)}
+  .fav svg{width:64%;height:64%}
+  .fav.dk{background:var(--dark);color:var(--gold-bright);border-color:#3a2d1a}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+</style>
+
+<!-- ============ SVG SYMBOL DEFS ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+
+  <!-- KEY + SKYLINE (the core mark) -->
+  <symbol id="m-key" viewBox="0 0 124 88">
+    <circle cx="26" cy="60" r="16" fill="none" stroke="currentColor" stroke-width="8.5"/>
+    <rect x="40" y="54" width="78" height="12" rx="3" fill="currentColor"/>
+    <g fill="currentColor">
+      <rect x="66" y="40" width="8" height="14"/><rect x="77" y="31" width="7" height="23"/>
+      <rect x="87" y="44" width="6" height="10"/><rect x="96" y="25" width="8" height="29"/>
+      <rect x="108" y="37" width="6" height="17"/>
+    </g>
+  </symbol>
+
+  <!-- A · HOUSE + KEY (faithful refine) -->
+  <symbol id="m-house" viewBox="0 0 124 150">
+    <path d="M20 44 L62 10 L104 44" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="currentColor"><rect x="55" y="24" width="6.5" height="6.5"/><rect x="63.5" y="24" width="6.5" height="6.5"/><rect x="55" y="32.5" width="6.5" height="6.5"/><rect x="63.5" y="32.5" width="6.5" height="6.5"/></g>
+    <g transform="translate(0,62)">
+      <circle cx="26" cy="60" r="16" fill="none" stroke="currentColor" stroke-width="8.5"/>
+      <rect x="40" y="54" width="78" height="12" rx="3" fill="currentColor"/>
+      <g fill="currentColor"><rect x="66" y="40" width="8" height="14"/><rect x="77" y="31" width="7" height="23"/><rect x="87" y="44" width="6" height="10"/><rect x="96" y="25" width="8" height="29"/><rect x="108" y="37" width="6" height="17"/></g>
+    </g>
+  </symbol>
+
+  <!-- B · OPEN DOOR (arch) + KEY -->
+  <symbol id="m-arch" viewBox="0 0 124 124">
+    <path d="M18 114 V58 a44 44 0 0 1 88 0 V114" fill="none" stroke="currentColor" stroke-width="6.5"/>
+    <path d="M10 114 H114" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+    <g transform="translate(20,34) scale(0.66)">
+      <circle cx="26" cy="60" r="16" fill="none" stroke="currentColor" stroke-width="9"/>
+      <rect x="40" y="54" width="78" height="12" rx="3" fill="currentColor"/>
+      <g fill="currentColor"><rect x="66" y="40" width="8" height="14"/><rect x="77" y="31" width="7" height="23"/><rect x="87" y="44" width="6" height="10"/><rect x="96" y="25" width="8" height="29"/><rect x="108" y="37" width="6" height="17"/></g>
+    </g>
+  </symbol>
+
+  <!-- C · SEAL -->
+  <symbol id="m-seal" viewBox="0 0 132 132">
+    <circle cx="66" cy="66" r="62" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="66" cy="66" r="52" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path id="sealpath" d="M66 16 a50 50 0 1 1 -0.01 0" fill="none"/>
+    <text font-family="Marcellus,serif" font-size="8.4" letter-spacing="2.4" fill="currentColor" text-anchor="middle"><textPath href="#sealpath" startOffset="50%">CHURCH OF PHILADELPHIA  ·  THE OPEN DOOR  · </textPath></text>
+    <g transform="translate(20,52) scale(0.62)">
+      <circle cx="26" cy="60" r="16" fill="none" stroke="currentColor" stroke-width="9"/>
+      <rect x="40" y="54" width="78" height="12" rx="3" fill="currentColor"/>
+      <g fill="currentColor"><rect x="66" y="40" width="8" height="14"/><rect x="77" y="31" width="7" height="23"/><rect x="87" y="44" width="6" height="10"/><rect x="96" y="25" width="8" height="29"/><rect x="108" y="37" width="6" height="17"/></g>
+    </g>
+  </symbol>
+</defs></svg>
+
+</head>
+<body>
+<div class="wrap">
+  <span class="label">Church of Philadelphia · Logo</span>
+  <h1>Logo concepts</h1>
+  <p class="intro">Three refined takes on your existing mark — keeping its DNA (the <b>Key of David</b> whose teeth form a <b>city skyline</b>, the <b>house / open door</b>) but rebuilt as clean vector art in gold, with a proper serif wordmark instead of the old script. All scale crisply from favicon to banner, and invert to gold-on-dark.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="stage"><svg><use href="#m-house"/></svg></div>
+      <div class="cbody"><span class="tag">Concept A</span><h3>House &amp; Key</h3><p>Closest to your original: the roofline house of God above, the skyline-key below. Familiar, literal, warm.</p></div>
+    </div>
+    <div class="card">
+      <div class="stage"><svg><use href="#m-arch"/></svg></div>
+      <div class="cbody"><span class="tag">Concept B</span><h3>Open Door &amp; Key</h3><p>The Rev 3:8 "open door" arch holds the skyline-key inside it. Unifies door + key + city into one icon. My pick.</p></div>
+    </div>
+    <div class="card">
+      <div class="stage"><svg><use href="#m-seal"/></svg></div>
+      <div class="cbody"><span class="tag">Concept C</span><h3>The Seal</h3><p>A classical roundel — the key at center, "Church of Philadelphia · The Open Door" around the ring. Heraldic, illuminated.</p></div>
+    </div>
+  </div>
+
+  <h2>Header lockups</h2>
+  <div class="lockrow">
+    <div class="lockup"><svg><use href="#m-arch"/></svg><span class="wm"><span class="name">Philadelphia</span><span class="sub">Church of the Open Door</span></span></div>
+    <div class="lockup"><svg style="width:56px;height:56px"><use href="#m-key"/></svg><span class="wm"><span class="name">Philadelphia</span></span></div>
+  </div>
+
+  <h2>On dark (inverted) &amp; favicons</h2>
+  <div class="darkstrip">
+    <svg><use href="#m-house"/></svg>
+    <svg><use href="#m-arch"/></svg>
+    <svg><use href="#m-seal"/></svg>
+  </div>
+  <div class="favs">
+    <span class="fav"><svg><use href="#m-key"/></svg></span>
+    <span class="fav"><svg><use href="#m-arch"/></svg></span>
+    <span class="fav dk"><svg><use href="#m-key"/></svg></span>
+    <span class="fav dk"><svg><use href="#m-arch"/></svg></span>
+    <span style="color:var(--ink-soft);font-size:.9rem">← favicon / app-icon sizes (the key alone reads best when tiny)</span>
+  </div>
+</div>
+</body>
+</html>

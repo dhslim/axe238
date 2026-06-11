@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Philadelphia — The Eight Levels of Giving</title>
-<meta name="description" content="The Eight Levels of Giving — the ascending ladder of charity. Church of Philadelphia, Stratford CT." />
+<meta name="description" content="The Eight Levels of Giving. Church of Philadelphia, Stratford CT." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Marcellus&display=swap" rel="stylesheet" />
@@ -17,45 +17,33 @@
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.16rem;line-height:1.6;
-    background-image:radial-gradient(120% 50% at 50% -6%,rgba(212,165,60,.18),transparent 55%)}
-  .wrap{max-width:880px;margin:0 auto;padding:0 1.6rem}
+    background-image:radial-gradient(120% 50% at 50% -6%,rgba(212,165,60,.16),transparent 55%)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 1.6rem}
   h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.04;margin:.3rem 0 0;text-align:center}
   .label{font-family:var(--label);text-transform:uppercase;letter-spacing:.32em;font-size:.74rem;color:var(--gold-label);text-align:center;display:block}
-  .verse{font-family:var(--display);font-style:italic;font-size:1.35rem;color:var(--gold-deep);text-align:center;max-width:34ch;margin:1rem auto 0}
-  .intro{text-align:center;color:var(--ink-soft);max-width:54ch;margin:1.6rem auto 0}
-  /* slim brand bar */
+  .verse{font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--gold-deep);text-align:center;max-width:38ch;margin:1rem auto 0}
   .topbar{border-bottom:1px solid var(--line);background:var(--bg2)}
-  .topbar .wrap{display:flex;align-items:center;gap:.6rem;height:60px}
+  .topbar .wrap{display:flex;align-items:center;gap:.6rem;height:60px;max-width:1040px}
   .brand{display:flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:1.3rem;text-decoration:none;color:var(--ink)}
   .topbar .right{margin-left:auto;font-family:var(--label);letter-spacing:.1em;font-size:.72rem;color:var(--ink-soft);text-transform:uppercase}
-  section{padding:clamp(3.5rem,7vw,5.5rem) 0}
-  /* the ladder */
-  .crown{text-align:center;margin:2.6rem auto 0;max-width:44ch}
-  .crown .light{width:70px;height:70px;margin:0 auto .4rem;color:var(--gold-deep);filter:drop-shadow(0 0 22px rgba(212,165,60,.5))}
-  .crown small{font-family:var(--label);letter-spacing:.14em;text-transform:uppercase;font-size:.68rem;color:var(--gold-label)}
-  .ladder{position:relative;max-width:720px;margin:1.4rem auto 0}
-  .ladder::before{content:"";position:absolute;left:33px;top:-18px;bottom:14px;width:2px;
-    background:linear-gradient(180deg,rgba(212,165,60,0),var(--gold-bright) 8%,var(--gold-deep) 50%,var(--gold-deep) 88%,transparent);}
-  .rung{position:relative;display:grid;grid-template-columns:68px 1fr;gap:1.3rem;align-items:start;padding:1.35rem 0;border-bottom:1px solid var(--line)}
-  .rung:last-child{border-bottom:none}
-  .rung .num{position:relative;z-index:1;width:54px;height:54px;margin:0 auto;border:1.5px solid var(--gold-deep);border-radius:50%;
-    background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.9rem;color:var(--gold-deep);line-height:1}
-  .rung:first-child .num{border-color:var(--gold-bright);box-shadow:0 0 0 5px rgba(212,165,60,.16);color:var(--gold-deep)}
-  .rung .body .tier{font-family:var(--label);letter-spacing:.14em;text-transform:uppercase;font-size:.64rem;color:var(--gold-label)}
-  .rung .body p{margin:.2rem 0 0;font-size:1.12rem;color:var(--ink)}
-  .rung .body em{color:var(--gold-deep);font-style:italic}
-  .ends{display:flex;justify-content:space-between;max-width:720px;margin:.8rem auto 0;font-family:var(--label);
-    letter-spacing:.12em;text-transform:uppercase;font-size:.64rem;color:var(--ink-soft)}
+  section{padding:clamp(3.5rem,7vw,5rem) 0}
+  /* numbered list — least (1) to greatest (8) */
+  .levels{max-width:680px;margin:2.4rem auto 0;list-style:none;padding:0}
+  .levels li{display:grid;grid-template-columns:54px 1fr;gap:1.2rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+  .levels li:last-child{border-bottom:none}
+  .levels .num{font-family:var(--display);font-size:1.9rem;color:var(--gold-deep);text-align:center;line-height:1}
+  .levels li:last-child .num{color:var(--gold);font-weight:600}
+  .levels p{margin:0;font-size:1.12rem;color:var(--ink)}
+  .levels .tier{display:block;font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--gold-label);margin-bottom:.2rem}
   /* give methods */
-  .give{margin-top:3.5rem;text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:2.4rem 1.5rem}
+  .give{margin-top:3.2rem;text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:2.4rem 1.5rem}
   .give h2{font-family:var(--display);font-weight:500;font-size:2rem;margin:.4rem 0 .2rem}
   .methods{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
   .btn{font-family:var(--label);letter-spacing:.08em;font-size:.92rem;background:var(--gold-deep);color:#fff8e8;padding:.85rem 1.8rem;border-radius:2px;text-decoration:none;transition:background .2s,transform .2s}
   .btn:hover{background:#825c18;transform:translateY(-2px)}
   .btn.alt{background:transparent;color:var(--gold-deep);border:1px solid var(--gold-deep)}
   .give small{display:block;margin-top:1.2rem;color:var(--ink-soft);font-size:.92rem}
-  @media (max-width:560px){.rung{grid-template-columns:54px 1fr;gap:1rem}.ladder::before{left:26px}}
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media (max-width:560px){.levels li{grid-template-columns:40px 1fr;gap:1rem}}
   :focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
 </style>
 </head>
@@ -66,31 +54,20 @@
 </div></div>
 
 <section><div class="wrap">
-  <span class="label">God Loves a Cheerful Giver · 2 Corinthians 9:7</span>
+  <span class="label">2 Corinthians 9:7</span>
   <h1>The Eight Levels of Giving</h1>
-  <p class="verse">"The Lord loves a cheerful giver."</p>
-  <p class="intro">There is a ladder to charity. Each rung gives more truly than the one below it — from the reluctant gift at the bottom to the gift that frees a person from need altogether at the top.</p>
+  <p class="verse">"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver."</p>
 
-  <div class="crown">
-    <svg class="light" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-      <path d="M16 60V30a16 16 0 0 1 32 0v30"/><path d="M8 60h48"/>
-      <path d="M32 60V36" stroke-opacity=".5"/>
-      <path d="M32 2v8M32 10l5 4M32 10l-5 4" stroke-opacity=".7"/>
-    </svg>
-    <small>The highest rung — toward the open door</small>
-  </div>
-
-  <div class="ladder">
-    <div class="rung"><div class="num">1</div><div class="body"><span class="tier">The Highest</span><p>He who gives, and <em>also assists the recipient</em> in addressing the reason for the need in the first place.</p></div></div>
-    <div class="rung"><div class="num">2</div><div class="body"><p>He who gives without knowing who will receive — and without the recipient knowing who gave it.</p></div></div>
-    <div class="rung"><div class="num">3</div><div class="body"><p>He who gives and knows who will receive it — but the recipient will not know who gave it.</p></div></div>
-    <div class="rung"><div class="num">4</div><div class="body"><p>He who gives and does not know who receives — but the recipient knows who gave it.</p></div></div>
-    <div class="rung"><div class="num">5</div><div class="body"><p>He who gives enough, and <em>before he is asked</em> — but with both parties knowing each other.</p></div></div>
-    <div class="rung"><div class="num">6</div><div class="body"><p>He who gives enough — but only after he is asked.</p></div></div>
-    <div class="rung"><div class="num">7</div><div class="body"><p>He who does not give enough — but what he gives, he gives graciously.</p></div></div>
-    <div class="rung"><div class="num">8</div><div class="body"><span class="tier">The Lowest</span><p>He who does not give enough — and even that, unwillingly.</p></div></div>
-  </div>
-  <div class="ends"><span>↑ Rung 1 — the highest form of giving</span><span>Rung 8 — the lowest ↓</span></div>
+  <ol class="levels">
+    <li><span class="num">1</span><div><span class="tier">Least</span><p>He who gives grudgingly.</p></div></li>
+    <li><span class="num">2</span><p>He who gives less than he should — but gives it gladly.</p></li>
+    <li><span class="num">3</span><p>He who gives only after he is asked.</p></li>
+    <li><span class="num">4</span><p>He who gives before he is asked.</p></li>
+    <li><span class="num">5</span><p>He who gives without knowing who receives — though the recipient knows him.</p></li>
+    <li><span class="num">6</span><p>He who gives knowing who receives — though they do not know him.</p></li>
+    <li><span class="num">7</span><p>He who gives in secret — neither knowing the other.</p></li>
+    <li><span class="num">8</span><div><span class="tier">Greatest</span><p>He who helps another become self-sufficient — so they no longer need to be given to.</p></div></li>
+  </ol>
 
   <div class="give">
     <span class="label">Give to the Church</span>
