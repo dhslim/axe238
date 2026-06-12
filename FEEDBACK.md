@@ -6,11 +6,11 @@ Internal suggestions log for the axe238 rebuild. Workflow: tell Claude *"feedbac
 
 ## Built site (Illuminated-Light) — dhslim.github.io/axe238
 - [ ] 2026-06-12 — **Four Faces statues "not totally obvious"** — exploring replacements: museum-statue alternatives + 4 generated illustrated/animated SVG sets (heraldic linework / bold silhouettes / stained glass / woodcut). Picker hub: `public/design/faces-options.html`. Known: each illustrated set's lion is its weakest figure — redraw after a set is chosen.
-- [x] ✅ 2026-06-12 — **Four Faces: replace the line figures with statue pictures.** Implemented as weathered classical sculpture (all CC0, Cleveland Museum of Art open access) in arched plates with keyline mat, sepia grading, per-face accent tint at the arch top; hover lifts the sepia veil:
-  - Lion — *Statuette of a Lion*, limestone, 380–246 BCE
-  - Ox — *Fragment of a Capital with the Ox of Saint Luke*, marble, c. 1175–1200
-  - Man — *Saint Michael the Archangel*, fossiliferous limestone, c. 1280 (deeper sepia override to neutralize the blue museum backdrop)
-  - Eagle — *Imperial Eagle*, bronze with garnet inlays, 100 BCE–100 CE
+- [x] ✅ 2026-06-12 — **Four Faces: replace the line figures with statue pictures.** Implemented as weathered classical sculpture (all CC0/PD museum open access) in arched plates with keyline mat, sepia grading, per-face accent tint at the arch top; hover lifts the sepia veil. Final merged set (2026-06-13, Mac picks for lion/eagle — full weathered-stone coherence):
+  - Lion — *Marble statue of a lion*, pitted Greek marble, ca. 400–390 BCE (The Met)
+  - Ox — *Fragment of a Capital with the Ox of Saint Luke*, marble, c. 1175–1200 (Cleveland)
+  - Man — *Saint Michael the Archangel*, fossiliferous limestone, c. 1280 (Cleveland; deeper sepia override to neutralize the blue museum backdrop)
+  - Eagle — *Corbel with an Eagle*, weathered Roman marble (Museo Nazionale Romano, PD)
 - [x] ✅ 2026-06-12 — **Broken nav links on the deployed site** (`/axe238teachings`, `/axe238favicon.svg`): `base` missing trailing slash in `astro.config.mjs`. Fixed → `base: '/axe238/'`.
 
 ## Prototypes

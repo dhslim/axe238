@@ -32,3 +32,6 @@ Thumbs.db
 *.stackdump
 .vscode/
 .idea/
+
+# playwright mcp scratch
+.playwright-mcp/
