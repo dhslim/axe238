@@ -5,6 +5,7 @@ Internal suggestions log for the axe238 rebuild. Workflow: tell Claude *"feedbac
 > Recreated 2026-06-12 from the Mac session (original file was stranded uncommitted there).
 
 ## Built site (Illuminated-Light) — dhslim.github.io/axe238
+- [ ] 2026-06-12 — **Four Faces statues "not totally obvious"** — exploring replacements: museum-statue alternatives + 4 generated illustrated/animated SVG sets (heraldic linework / bold silhouettes / stained glass / woodcut). Picker hub: `public/design/faces-options.html`. Known: each illustrated set's lion is its weakest figure — redraw after a set is chosen.
 - [x] ✅ 2026-06-12 — **Four Faces: replace the line figures with statue pictures.** Implemented as weathered classical sculpture (all CC0, Cleveland Museum of Art open access) in arched plates with keyline mat, sepia grading, per-face accent tint at the arch top; hover lifts the sepia veil:
   - Lion — *Statuette of a Lion*, limestone, 380–246 BCE
   - Ox — *Fragment of a Capital with the Ox of Saint Luke*, marble, c. 1175–1200

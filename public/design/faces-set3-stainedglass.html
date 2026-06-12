@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Faces — Stained-Glass Panes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond:ital@0;1&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vellum:#FAF4E6;
+  --ink:#2A2014;
+  --ink-soft:#6B5A40;
+  --gold:#C8972E;
+  --gold-deep:#9A6E20;
+  --hairline:#E2D4B2;
+  --panel:#FBF6E9;
+  --crimson:#9E2B25;
+  --clay:#8A5A2B;
+  --teal:#2F5D62;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--vellum);
+  color:var(--ink);
+  font-family:'EB Garamond',serif;
+  min-height:100vh;
+  padding:4rem 2rem 6rem;
+}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{
+  font-family:'Marcellus',serif;
+  font-variant:small-caps;
+  letter-spacing:.32em;
+  text-transform:lowercase;
+  color:var(--gold-deep);
+  font-size:.85rem;
+  text-align:center;
+  margin-bottom:.9rem;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:clamp(2.2rem,4.5vw,3.4rem);
+  text-align:center;
+  line-height:1.1;
+}
+.lede{
+  text-align:center;
+  color:var(--ink-soft);
+  max-width:46ch;
+  margin:1rem auto 0;
+  font-size:1.06rem;
+}
+.rule{
+  width:120px;height:1px;background:var(--hairline);
+  margin:2.6rem auto;position:relative;
+}
+.rule::after{
+  content:"";position:absolute;left:50%;top:50%;
+  width:7px;height:7px;transform:translate(-50%,-50%) rotate(45deg);
+  background:var(--gold);
+}
+</style>
+</head>
+<body>
+<style>
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.7rem;margin-top:3rem}
+@media (max-width:880px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+.card{text-align:center}
+.plate{position:relative;aspect-ratio:3/4;border-radius:999px 999px 6px 6px;border:1px solid var(--hairline);background:var(--panel);overflow:hidden;transition:box-shadow .7s ease}
+.plate::before{content:"";position:absolute;inset:7px;border:1px solid rgba(200,151,46,.55);border-radius:992px 992px 4px 4px;pointer-events:none;z-index:3}
+.plate::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 30%,transparent),transparent 52%);pointer-events:none;z-index:2}
+svg.window{position:absolute;inset:0;width:100%;height:100%;z-index:1;transition:filter .8s ease}
+.card:hover .plate svg.window{filter:brightness(1.13) saturate(1.08)}
+.card:hover .plate{box-shadow:0 14px 38px -20px rgba(154,110,32,.55)}
+.sheen{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden;border-radius:inherit}
+.sheen::before{content:"";position:absolute;top:-25%;bottom:-25%;left:-65%;width:55%;background:linear-gradient(105deg,transparent 8%,rgba(255,250,232,.38) 50%,transparent 92%);transform:skewX(-16deg) translateX(-20%);opacity:0}
+svg .fig{stroke:#2A2014;stroke-width:3;stroke-linejoin:round}
+svg .ink{stroke:#2A2014;stroke-width:2.6;fill:none;stroke-linecap:round}
+svg .dot{fill:#2A2014;stroke:none}
+svg .lead{fill:none;stroke:#2A2014}
+.name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:2rem;margin-top:1.1rem;line-height:1.1}
+.sub{font-family:'Marcellus',serif;font-variant:small-caps;letter-spacing:.22em;font-size:.95rem;color:color-mix(in srgb,var(--gold-deep) 80%,var(--ink));margin-top:.2rem}
+.desc{color:var(--ink-soft);font-size:1rem;margin-top:.45rem}
+</style>
+<div class="wrap">
+<p class="eyebrow">Style III &middot; Stained-Glass Panes</p>
+<h1>The Four Faces</h1>
+<p class="lede">The four living creatures of Revelation 4, rendered as leaded glass &mdash; each window lit pane by pane, as morning enters the nave.</p>
+<div class="rule"></div>
+<section class="grid">
+<article class="card" style="--accent:var(--crimson);--d:.1s">
+<div class="plate">
+<svg class="window" viewBox="0 0 240 320" role="img" aria-labelledby="tL"><title id="tL">A walking lion in profile with a great scalloped mane and a tufted tail, in crimson stained glass beneath a gold halo</title>
+<defs>
+<radialGradient id="gHalo" cx="50%" cy="42%" r="62%"><stop offset="0" stop-color="#F2DFAC"/><stop offset=".62" stop-color="#DDBA6A"/><stop offset="1" stop-color="#C8972E"/></radialGradient>
+<radialGradient id="lMane" cx="50%" cy="45%" r="65%"><stop offset="0" stop-color="#C5524A"/><stop offset="1" stop-color="#8C201B"/></radialGradient>
+<linearGradient id="lBody" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8473E"/><stop offset="1" stop-color="#92261F"/></linearGradient>
+<linearGradient id="lLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DA8E83"/><stop offset="1" stop-color="#BC5D52"/></linearGradient>
+<linearGradient id="lDeep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9E2B25"/><stop offset="1" stop-color="#771913"/></linearGradient>
+<clipPath id="clipL"><path d="M18,142 A102,102 0 0 1 222,142 L222,302 L18,302 Z"/></clipPath>
+</defs>
+<g id="winL">
+<g clip-path="url(#clipL)">
+<rect class="pane" style="--i:0" x="14" y="36" width="212" height="270" fill="#EDE4CC"/>
+<path class="pane" style="--i:1" d="M32,142 A88,88 0 0 1 208,142 V252 H32 Z" fill="#F4EAD3"/>
+<rect class="pane" style="--i:2" x="14" y="252" width="212" height="54" fill="#E7DAB6"/>
+<path class="lead" fill="none" stroke="#2A2014" d="M32,142 A88,88 0 0 1 208,142 M32,142 V252 M208,142 V252 M18,252 H222" stroke-width="3"/>
+<circle class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:3" cx="90" cy="130" r="56" fill="url(#gHalo)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:4" d="M124,120 Q156,108 182,122 Q200,132 204,156 Q207,176 198,194 Q172,206 140,198 L120,190 Q112,152 124,120 Z" fill="url(#lBody)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M166,196 Q164,222 156,242 Q153,250 161,250 L172,250 Q178,250 177,242 L180,222 L186,242 Q186,250 193,250 L204,250 Q211,250 208,242 Q200,220 198,194 Q182,204 166,196 Z" fill="url(#lDeep)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M120,192 L116,242 Q114,250 122,250 L134,250 Q140,250 138,242 L134,198 Z" fill="url(#lBody)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M118,183 Q98,180 82,184 Q70,186 63,183 Q56,182 56,189 Q56,196 65,197 Q84,199 102,197 L120,197 Z" fill="url(#lLight)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M200,182 Q218,170 220,148 Q221,136 214,128 L208,132 Q214,142 211,152 Q206,166 194,172 Z" fill="url(#lDeep)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M214,132 Q204,118 211,106 Q222,110 220,126 Q218,132 214,132 Z" fill="url(#lDeep)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:7" d="M90,92 A19,19 0 0 1 121,105 A19,19 0 0 1 132,134 A19,19 0 0 1 121,163 A19,19 0 0 1 90,176 A19,19 0 0 1 59,163 A19,19 0 0 1 48,134 A19,19 0 0 1 59,105 A19,19 0 0 1 90,92 Z" fill="url(#lMane)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:8" d="M88,104 Q64,106 52,122 L40,128 Q35,132 40,136 L50,139 Q53,152 68,154 Q84,156 88,138 Q92,118 88,104 Z" fill="url(#lLight)"/>
+<g class="pane" style="--i:9">
+<circle class="dot" fill="#2A2014" cx="68" cy="124" r="2.7"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M42,135 Q52,140 62,142"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M58,114 Q70,109 80,112"/>
+</g>
+</g>
+<path class="lead" fill="none" stroke="#2A2014" d="M18,142 A102,102 0 0 1 222,142 V302 H18 Z" stroke-width="7"/>
+</g>
+</svg>
+<span class="sheen" aria-hidden="true"></span>
+</div>
+<h2 class="name">Lion</h2>
+<p class="sub">Strength</p>
+<p class="desc">Righteousness, Boldness &amp; Protection</p>
+</article>
+<article class="card" style="--accent:var(--clay);--d:.55s">
+<div class="plate">
+<svg class="window" viewBox="0 0 240 320" role="img" aria-labelledby="tO"><title id="tO">A standing ox in profile with tall curved horns, heavy shoulders and a dewlap, in clay-brown stained glass beneath a gold halo</title>
+<defs>
+<linearGradient id="oBody" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B07F4A"/><stop offset="1" stop-color="#7C4E22"/></linearGradient>
+<linearGradient id="oLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9B98C"/><stop offset="1" stop-color="#B98A55"/></linearGradient>
+<linearGradient id="oHorn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2E7CE"/><stop offset="1" stop-color="#DCC49B"/></linearGradient>
+<linearGradient id="oDeep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A5A2B"/><stop offset="1" stop-color="#5E3A17"/></linearGradient>
+<clipPath id="clipO"><path d="M18,142 A102,102 0 0 1 222,142 L222,302 L18,302 Z"/></clipPath>
+</defs>
+<g id="winO">
+<g clip-path="url(#clipO)">
+<rect class="pane" style="--i:0" x="14" y="36" width="212" height="270" fill="#EDE4CC"/>
+<path class="pane" style="--i:1" d="M32,142 A88,88 0 0 1 208,142 V252 H32 Z" fill="#F4EAD3"/>
+<rect class="pane" style="--i:2" x="14" y="252" width="212" height="54" fill="#E7DAB6"/>
+<path class="lead" fill="none" stroke="#2A2014" d="M32,142 A88,88 0 0 1 208,142 M32,142 V252 M208,142 V252 M18,252 H222" stroke-width="3"/>
+<circle class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:3" cx="76" cy="148" r="56" fill="url(#gHalo)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:4" d="M98,150 Q112,128 134,128 Q150,128 158,140 Q180,134 198,144 Q210,152 212,172 Q214,196 204,210 Q170,222 134,214 L106,204 Q96,176 98,150 Z" fill="url(#oBody)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M170,212 L164,242 Q162,250 170,250 L179,250 Q184,250 183,243 L186,226 L192,243 Q193,250 199,250 L208,250 Q214,250 212,242 L206,208 Q188,216 170,212 Z" fill="url(#oDeep)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M108,204 L104,242 Q103,250 110,250 L119,250 Q124,250 123,243 L124,224 L130,243 Q130,250 137,250 L146,250 Q152,250 150,242 L144,210 Q126,212 108,204 Z" fill="url(#oBody)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M208,176 Q216,196 214,220 Q213,230 206,228 Q202,226 204,218 Q206,198 200,184 Z" fill="url(#oDeep)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M206,228 Q198,238 205,246 Q214,242 211,228 Z" fill="url(#oDeep)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M86,190 Q98,204 100,222 Q102,232 110,232 Q114,224 110,208 Q104,194 96,188 Q90,192 86,190 Z" fill="url(#oLight)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:7" d="M92,140 Q66,140 52,158 Q42,170 40,184 Q39,194 48,196 L66,198 Q78,199 84,190 Q92,172 96,152 Z" fill="url(#oLight)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:8" d="M80,146 Q54,136 46,110 Q42,92 56,90 Q64,90 61,100 Q60,120 78,134 Q86,140 84,148 Z" fill="url(#oHorn)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:8" d="M90,144 Q106,128 108,106 Q110,92 122,98 Q130,104 120,116 Q108,132 98,146 Z" fill="url(#oHorn)"/>
+<g class="pane" style="--i:9">
+<circle class="dot" fill="#2A2014" cx="66" cy="166" r="2.7"/>
+<circle class="dot" fill="#2A2014" cx="48" cy="186" r="2"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M44,176 Q54,178 62,176"/>
+</g>
+</g>
+<path class="lead" fill="none" stroke="#2A2014" d="M18,142 A102,102 0 0 1 222,142 V302 H18 Z" stroke-width="7"/>
+</g>
+</svg>
+<span class="sheen" aria-hidden="true"></span>
+</div>
+<h2 class="name">Ox</h2>
+<p class="sub">Labor</p>
+<p class="desc">The Work of God; perennial strength</p>
+</article>
+<article class="card" style="--accent:var(--gold);--d:1s">
+<div class="plate">
+<svg class="window" viewBox="0 0 240 320" role="img" aria-labelledby="tM"><title id="tM">The dignified face of a bearded man with open eyes, robed, framed by a gold halo in golden stained glass</title>
+<defs>
+<linearGradient id="mFace" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2DEB2"/><stop offset="1" stop-color="#E0C188"/></linearGradient>
+<linearGradient id="mHair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9782B"/><stop offset="1" stop-color="#7E5A18"/></linearGradient>
+<linearGradient id="mBeard" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C09335"/><stop offset="1" stop-color="#9C711F"/></linearGradient>
+<linearGradient id="mRobe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9B364"/><stop offset="1" stop-color="#B98A2E"/></linearGradient>
+<linearGradient id="mSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9892C"/><stop offset="1" stop-color="#8F661C"/></linearGradient>
+<clipPath id="clipM"><path d="M18,142 A102,102 0 0 1 222,142 L222,302 L18,302 Z"/></clipPath>
+</defs>
+<g id="winM">
+<g clip-path="url(#clipM)">
+<rect class="pane" style="--i:0" x="14" y="36" width="212" height="270" fill="#EDE4CC"/>
+<path class="pane" style="--i:1" d="M32,142 A88,88 0 0 1 208,142 V252 H32 Z" fill="#F4EAD3"/>
+<rect class="pane" style="--i:2" x="14" y="252" width="212" height="54" fill="#E7DAB6"/>
+<path class="lead" fill="none" stroke="#2A2014" d="M32,142 A88,88 0 0 1 208,142 M32,142 V252 M208,142 V252 M18,252 H222" stroke-width="3"/>
+<circle class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:3" cx="120" cy="118" r="56" fill="url(#gHalo)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:4" d="M103,193 Q78,201 67,219 Q58,235 56,268 L97,268 L103,193 Z" fill="url(#mSide)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:4" d="M137,193 Q162,201 173,219 Q182,235 184,268 L143,268 L137,193 Z" fill="url(#mSide)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M104,192 Q120,185 136,192 L142,268 L98,268 Z" fill="url(#mRobe)"/>
+<path class="pane ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" style="--i:5;stroke-width:3" d="M120,208 V230 M110,218 H130"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:6" d="M120,88 Q148,88 148,120 Q148,142 138,156 Q130,166 120,168 Q110,166 102,156 Q92,142 92,120 Q92,88 120,88 Z" fill="url(#mFace)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:7" d="M120,72 Q160,74 160,118 Q160,142 152,158 Q148,150 148,134 Q150,118 146,104 Q138,90 120,90 Q102,90 94,104 Q90,118 92,134 Q92,150 88,158 Q80,142 80,118 Q80,74 120,72 Z" fill="url(#mHair)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:8" d="M98,140 Q100,160 110,168 L113,161 Q120,157 127,161 L130,168 Q140,160 142,140 Q148,152 143,168 Q135,186 120,188 Q105,186 97,168 Q92,152 98,140 Z" fill="url(#mBeard)"/>
+<g class="pane" style="--i:9">
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M100,111 Q108,106 116,110 M124,110 Q132,106 140,111"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M101,118 Q108,113 115,118 M125,118 Q132,113 139,118"/>
+<circle class="dot" fill="#2A2014" cx="108" cy="119" r="2.4"/>
+<circle class="dot" fill="#2A2014" cx="132" cy="119" r="2.4"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M120,113 L117,137 Q116,142 122,141"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M112,153 Q120,158 128,153"/>
+</g>
+</g>
+<path class="lead" fill="none" stroke="#2A2014" d="M18,142 A102,102 0 0 1 222,142 V302 H18 Z" stroke-width="7"/>
+</g>
+</svg>
+<span class="sheen" aria-hidden="true"></span>
+</div>
+<h2 class="name">Man</h2>
+<p class="sub">Order</p>
+<p class="desc">Spiritual Order; the Face of God</p>
+</article>
+<article class="card" style="--accent:var(--teal);--d:1.45s">
+<div class="plate">
+<svg class="window" viewBox="0 0 240 320" role="img" aria-labelledby="tE"><title id="tE">An eagle displayed with wings spread wide, hooked beak in profile and a fanned tail, in teal stained glass beneath a gold halo</title>
+<defs>
+<linearGradient id="eW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F858C"/><stop offset="1" stop-color="#2A5257"/></linearGradient>
+<linearGradient id="eB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E7077"/><stop offset="1" stop-color="#234346"/></linearGradient>
+<linearGradient id="eH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9DCD8"/><stop offset="1" stop-color="#9DBDB8"/></linearGradient>
+<linearGradient id="eT" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A6B70"/><stop offset="1" stop-color="#264A4E"/></linearGradient>
+<clipPath id="clipE"><path d="M18,142 A102,102 0 0 1 222,142 L222,302 L18,302 Z"/></clipPath>
+</defs>
+<g id="winE">
+<g clip-path="url(#clipE)">
+<rect class="pane" style="--i:0" x="14" y="36" width="212" height="270" fill="#EDE4CC"/>
+<path class="pane" style="--i:1" d="M32,142 A88,88 0 0 1 208,142 V252 H32 Z" fill="#F4EAD3"/>
+<rect class="pane" style="--i:2" x="14" y="252" width="212" height="54" fill="#E7DAB6"/>
+<path class="lead" fill="none" stroke="#2A2014" d="M32,142 A88,88 0 0 1 208,142 M32,142 V252 M208,142 V252 M18,252 H222" stroke-width="3"/>
+<circle class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:3" cx="120" cy="120" r="56" fill="url(#gHalo)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:4" d="M104,218 L88,258 Q85,266 94,264 L102,258 Q104,266 112,264 L118,258 Q122,266 130,263 L136,258 Q140,266 149,262 Q156,259 152,251 L136,218 Q120,227 104,218 Z" fill="url(#eT)"/>
+<path class="pane ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" style="--i:4" d="M112,224 L102,257 M120,226 V260 M128,224 L138,257"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M138,156 Q160,132 188,120 Q206,112 214,122 Q216,126 211,128 L213,137 Q209,139 205,138 L205,148 Q200,150 195,147 Q189,168 173,182 Q157,194 143,191 Q134,187 134,172 Q134,161 138,156 Z" fill="url(#eW)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:5" d="M102,156 Q80,132 52,120 Q34,112 26,122 Q24,126 29,128 L27,137 Q31,139 35,138 L35,148 Q40,150 45,147 Q51,168 67,182 Q83,194 97,191 Q106,187 106,172 Q106,161 102,156 Z" fill="url(#eW)"/>
+<path class="pane ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" style="--i:6" d="M146,182 Q168,166 186,142 M140,170 Q158,156 174,136"/>
+<path class="pane ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" style="--i:6" d="M94,182 Q72,166 54,142 M100,170 Q82,156 66,136"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:7" d="M130,138 Q146,150 148,178 Q150,206 136,224 Q128,232 120,232 Q112,232 104,224 Q90,206 92,178 Q94,150 110,140 Q120,134 130,138 Z" fill="url(#eB)"/>
+<path class="pane fig" stroke="#2A2014" stroke-width="3" stroke-linejoin="round" style="--i:8" d="M132,140 Q134,116 122,106 Q112,98 102,106 Q96,108 94,112 Q86,112 82,116 Q78,120 84,127 Q86,130 88,126 Q88,122 93,122 L97,124 Q98,131 104,133 Q112,136 115,144 Q124,150 132,140 Z" fill="url(#eH)"/>
+<g class="pane" style="--i:9">
+<circle class="dot" fill="#2A2014" cx="108" cy="114" r="2.6"/>
+<path class="ink" fill="none" stroke="#2A2014" stroke-width="2.6" stroke-linecap="round" d="M98,111 Q96,117 98,124"/>
+</g>
+</g>
+<path class="lead" fill="none" stroke="#2A2014" d="M18,142 A102,102 0 0 1 222,142 V302 H18 Z" stroke-width="7"/>
+</g>
+</svg>
+<span class="sheen" aria-hidden="true"></span>
+</div>
+<h2 class="name">Eagle</h2>
+<p class="sub">Sight</p>
+<p class="desc">Spiritual sight; operating in God&rsquo;s light</p>
+</article>
+</section>
+<div class="rule"></div>
+<section class="miniRow">
+<div class="mini">
+<svg viewBox="0 0 240 320" role="img" aria-label="Lion window at small size"><use href="#winL"/></svg>
+<svg viewBox="0 0 240 320" role="img" aria-label="Ox window at small size"><use href="#winO"/></svg>
+<svg viewBox="0 0 240 320" role="img" aria-label="Man window at small size"><use href="#winM"/></svg>
+<svg viewBox="0 0 240 320" role="img" aria-label="Eagle window at small size"><use href="#winE"/></svg>
+</div>
+<p class="miniCap">at favicon size</p>
+</section>
+<style>
+.miniRow{text-align:center;margin-top:.5rem}
+.mini{display:flex;gap:1.5rem;justify-content:center;align-items:flex-end}
+.mini svg{width:56px;height:74px;display:block}
+.miniCap{font-family:'Marcellus',serif;font-variant:small-caps;letter-spacing:.22em;font-size:.85rem;color:var(--ink-soft);margin-top:1rem}
+@media (prefers-reduced-motion: no-preference){
+  .grid .pane{animation:paneLight 1.05s cubic-bezier(.25,.6,.3,1) both;animation-delay:calc(var(--d,0s) + var(--i,0)*.17s)}
+  .sheen::before{animation:sweep 7s ease-in-out infinite;animation-delay:calc(var(--d,0s) + 2.6s)}
+}
+@keyframes paneLight{
+  0%{opacity:.14;filter:brightness(.45) saturate(.6)}
+  55%{opacity:1;filter:brightness(1.32) saturate(1.05)}
+  100%{opacity:1;filter:brightness(1)}
+}
+@keyframes sweep{
+  0%,76%{transform:skewX(-16deg) translateX(-20%);opacity:0}
+  80%{opacity:1}
+  90%{opacity:.85}
+  94%,100%{transform:skewX(-16deg) translateX(430%);opacity:0}
+}
+</style>
+</div>
+</body>
+</html>
